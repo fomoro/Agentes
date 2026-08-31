@@ -13,17 +13,22 @@ description: Crea, actualiza o revisa fichas y diagramas Draw.io de arquitectura
 
 ## Referencias
 
+- Lee `references/inventario-aplicaciones.md` antes de crear o actualizar una ficha que incluya aplicaciones o sistemas, para validar su nube o zona de despliegue.
 - Lee `references/estandar-diagramas-drawio.md` para crear, actualizar o revisar la ficha y su nomenclatura.
 - Lee `references/catalogo-elementos-y-estilos.md` y `references/reglas-de-armado-de-diagramas.md` antes de generar, actualizar o revisar el XML Draw.io.
 
 ## Flujo de Trabajo
 
 1. Identifica el modo de trabajo, las fuentes confirmadas y el alcance del diagrama.
-2. Resuelve la raíz del caso o proyecto activo y el autor aplicable.
-3. Crea o actualiza la ficha conforme al estándar. En modo revisión, registra hallazgos sin modificar archivos.
-4. Solicita aprobación de la ficha antes de generar o regenerar el XML, salvo que ya esté aprobada explícitamente en la solicitud actual.
-5. Genera o actualiza el Draw.io aplicando el estándar, el catálogo y las reglas de armado.
-6. Valida el criterio de cierre antes de entregar.
+2. Antes de construir la ficha, contrasta cada aplicación o sistema con el inventario:
+   - Si la fuente no indica nube o zona y existe una coincidencia única, usa el valor del inventario.
+   - Si la fuente contradice el inventario, informa la discrepancia y solicita definición antes de continuar.
+   - Si no existe una coincidencia única, conserva la ubicación como `Por definir`; no infieras.
+3. Resuelve la raíz del caso o proyecto activo y el autor aplicable.
+4. Crea o actualiza la ficha conforme al estándar. En modo revisión, registra hallazgos sin modificar archivos.
+5. Solicita aprobación de la ficha antes de generar o regenerar el XML, salvo que ya esté aprobada explícitamente en la solicitud actual.
+6. Genera o actualiza el Draw.io aplicando el estándar, el catálogo y las reglas de armado.
+7. Valida el criterio de cierre antes de entregar.
 
 ## Ubicación de los Entregables
 
@@ -56,4 +61,5 @@ El cambio futuro del autor crea una subcarpeta nueva y no mueve entregables hist
 - La ficha cumple el estándar y cuenta con la aprobación requerida.
 - El Draw.io comparte el nombre base de la ficha, abre correctamente y permanece editable.
 - El contenido coincide con la información confirmada y respeta el catálogo y las reglas de armado.
+- Las aplicaciones y sus ubicaciones fueron validadas contra el inventario o confirmadas explícitamente por el usuario.
 - Ambos archivos están en la carpeta resuelta para el caso y el autor.

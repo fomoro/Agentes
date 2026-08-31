@@ -16,7 +16,7 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 |---|---|
 | Zonas | Usarlas solo cuando aporten una responsabilidad o frontera visible. |
 | Orden | Puede cambiar según la historia que debe explicar el diagrama. |
-| Repetición | Una zona se puede repetir o apilar cuando mejora la lectura. |
+| Repetición | Debe repetirse o apilarse según el orden secuencial de la ficha. |
 | Frames | Usarlos cuando proveedor, entorno o frontera de red sean relevantes. |
 | Anidación | Cada contenedor debe aportar significado; evitar anidaciones decorativas. |
 
@@ -36,6 +36,7 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 |---|---|
 | Dirección | Toda relación debe tener origen y destino claros. |
 | Tipo | Usar síncrona o asíncrona según el comportamiento real. |
+| Conectividad entre plataformas | Para cada relación, cruza el entorno confirmado del origen y del destino con la matriz homónima del catálogo y aplica sus tramos y demarcación. Si faltan datos o existe más de una coincidencia, usa Por definir. No deduzcas conectividad por la posición visual. |
 | Etiqueta | Incluirla solo si aporta contexto del tramo, protocolo o medio. |
 | Pivote | Usarlo únicamente para una demarcación o dos tramos diferenciados. |
 

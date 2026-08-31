@@ -4,11 +4,9 @@ Toda ficha debe indicar qué contiene el diagrama y cómo se relacionan sus elem
 
 ## Formato y Nomenclatura
 
-- **Ubicación:** Guardar la ficha y el Draw.io en `<raíz-de-trabajo>/Diagramas de solucion/<autor>/`.
-- **Autor:** Obtener `<autor>` del nombre corto declarado como identidad del asistente o autor en el `AGENTS.md` raíz aplicable. Si no está definido, solicitarlo y no inferirlo.
 - **Archivo:** El archivo generado debe llamarse `especificacion-drawio-<nombre>.md`. El XML resultante usará el mismo nombre base con extensión `.drawio`.
 - **Título interno:** Usar el título `# Especificación de diagrama - <Nombre>`.
-- **Autoría interna:** Incluir inmediatamente después del título la línea `Autor: <autor>`.
+- **Autoría interna:** Incluir inmediatamente después del título la línea `Autor: <autor>`, usando el autor resuelto por la skill.
 
 ### Multi-Arquitectura
 Si el diagrama abarca múltiples escenarios o alternativas, **NO crees archivos separados**. Usa un único archivo `.md` y crea un subtítulo por cada arquitectura (ej. `## Alternativa 1`). Debajo de cada subtítulo, debes incluir las dos tablas descritas a continuación.

@@ -1,49 +1,59 @@
 ---
 name: diagramador-arquitectura
-description: Genera diagramas Draw.io (XML) a partir de fichas técnicas, usando el catálogo y reglas de Diagramación.
+description: Crea, actualiza o revisa fichas y diagramas Draw.io de arquitectura de solución o integración. Úsala cuando la solicitud requiera un entregable de diagramación; no la actives para análisis de arquitectura sin diagrama.
 ---
 
 # Diagramador de Arquitectura
 
-Tu objetivo es crear diagramas Draw.io válidos y estandarizados. 
+## Modos de Trabajo
+
+- **Crear:** construye la ficha y genera el Draw.io conforme al flujo.
+- **Actualizar:** modifica artefactos existentes conservando lo que no forma parte del cambio solicitado.
+- **Revisar:** valida los artefactos y reporta hallazgos; no modifica archivos salvo solicitud explícita.
+
+## Referencias
+
+- Lee `references/estandar-diagramas-drawio.md` para crear, actualizar o revisar la ficha y su nomenclatura.
+- Lee `references/catalogo-elementos-y-estilos.md` y `references/reglas-de-armado-de-diagramas.md` antes de generar, actualizar o revisar el XML Draw.io.
 
 ## Flujo de Trabajo
 
-Para cualquier solicitud de diagramación, ejecuta estrictamente en este orden:
-
-1. **Contexto:** Lee los tres archivos en la subcarpeta `references/` (`estandar-diagramas-drawio.md`, `catalogo-elementos-y-estilos.md` y `reglas-de-armado-de-diagramas.md`).
-2. **Especificación Consolidada:** Determina la raíz de trabajo y el autor desde el `AGENTS.md` raíz aplicable. Crea la carpeta `Diagramas de solucion/<autor>` dentro de la raíz de trabajo y genera allí el archivo Markdown usando estrictamente el nombre, formato y reglas de multi-arquitectura definidos en el Estándar. Solicita aprobación.
-3. **Generación XML Multi-Hoja:** Tras aprobarse el archivo Markdown, genera el XML `.drawio` en la misma carpeta y respetando el nombre base del archivo. Si hay múltiples alternativas, configúralo con múltiples páginas (hojas). Aplica los estilos del Catálogo y las Reglas de Armado.
+1. Identifica el modo de trabajo, las fuentes confirmadas y el alcance del diagrama.
+2. Resuelve la raíz del caso o proyecto activo y el autor aplicable.
+3. Crea o actualiza la ficha conforme al estándar. En modo revisión, registra hallazgos sin modificar archivos.
+4. Solicita aprobación de la ficha antes de generar o regenerar el XML, salvo que ya esté aprobada explícitamente en la solicitud actual.
+5. Genera o actualiza el Draw.io aplicando el estándar, el catálogo y las reglas de armado.
+6. Valida el criterio de cierre antes de entregar.
 
 ## Ubicación de los Entregables
 
 Resuelve la raíz de trabajo en este orden:
 
 1. Ruta de salida indicada explícitamente por el usuario.
-2. Raíz del caso o proyecto que contiene la ficha técnica o los documentos fuente.
-3. Raíz del proyecto activo donde se está desarrollando el trabajo.
+2. Raíz del caso o proyecto que contiene las fuentes.
+3. Raíz del proyecto activo donde se desarrolla el trabajo.
 
-Si no es posible identificarla sin ambigüedad, solicita únicamente la ruta de salida. No uses como destino la carpeta de esta skill ni el repositorio de Diagramación, salvo que sean explícitamente el caso o proyecto activo.
+Si no puedes identificarla sin ambigüedad, solicita únicamente la ruta. No uses la carpeta de esta skill ni el repositorio de agentes como destino, salvo que sean explícitamente el caso o proyecto activo.
 
-Resuelve el autor desde el `AGENTS.md` raíz aplicable al trabajo:
+Resuelve el autor desde el `AGENTS.md` raíz aplicable:
 
-1. Usa el nombre corto declarado explícitamente como identidad del asistente o autor, por ejemplo `Sam` en `Soy **Sam**`.
-2. No incluyas cargos, roles ni el texto complementario de la firma en el nombre de la carpeta.
-3. Conserva el nombre declarado y reemplaza únicamente caracteres no válidos para nombres de carpeta.
-4. Si el `AGENTS.md` aplicable no define un autor, solicita únicamente el nombre; no lo infieras.
+1. Usa el nombre corto declarado explícitamente como identidad del asistente o autor, excluye cargos y texto complementario de la firma, y reemplaza únicamente caracteres no válidos para nombres de carpeta.
+2. Si no existe un autor explícito, solicita únicamente el nombre; no lo infieras.
 
-El cambio futuro del autor crea una subcarpeta nueva y no implica mover entregables históricos.
+Guarda la ficha y el Draw.io, con la nomenclatura definida por el estándar, en:
 
-La estructura de salida debe ser:
+`<raíz-de-trabajo>/Diagramas de solucion/<autor>/`
 
-`<raíz-de-trabajo>/Diagramas de solucion/<autor>/especificacion-drawio-<nombre>.md`
+El cambio futuro del autor crea una subcarpeta nueva y no mueve entregables históricos. Crea la carpeta cuando no exista.
 
-`<raíz-de-trabajo>/Diagramas de solucion/<autor>/especificacion-drawio-<nombre>.drawio`
+## Restricciones Específicas
 
-Crea la carpeta de salida cuando no exista. Usa la skill y sus referencias únicamente como fuente de instrucciones, estándares y estilos.
+- **Trazabilidad:** conserva en el XML los nombres exactos definidos en la ficha.
+- **Cambios acotados:** al actualizar, modifica solo lo solicitado y preserva el resto.
 
-## Restricciones Críticas
+## Criterio de Cierre
 
-* **Cero inferencias:** Dibuja solo lo explícitamente confirmado en la ficha técnica.
-* **Trazabilidad:** Los nombres en el XML deben coincidir letra por letra con las leyendas de la ficha.
-* **KISS y Simplicidad:** Evita anidaciones o contenedores decorativos que no aporten fronteras reales. Ante la duda, pregunta.
+- La ficha cumple el estándar y cuenta con la aprobación requerida.
+- El Draw.io comparte el nombre base de la ficha, abre correctamente y permanece editable.
+- El contenido coincide con la información confirmada y respeta el catálogo y las reglas de armado.
+- Ambos archivos están en la carpeta resuelta para el caso y el autor.

@@ -1,30 +1,44 @@
-# Gobernanza local: Diagramación
+# Gobernanza local: Agentes especializados
 
-**Propósito:** Esta carpeta contiene el catálogo, las guías y los estándares para la creación de diagramas de arquitectura de solución e integración de manera estandarizada.
+## 1. Propósito
 
----
+Este archivo identifica los agentes especializados disponibles en el proyecto y establece las reglas comunes para seleccionarlos y coordinarlos. Cada agente delega su ejecución detallada en las skills y referencias que le correspondan.
 
-## 1. Agente Responsable
+Cuando se incorpore un nuevo agente, debe registrarse en la sección **Agentes especializados del proyecto** con su responsabilidad, ámbito y skill principal.
 
-Al trabajar en esta carpeta o cuando se solicite el diseño de una arquitectura, asumes el siguiente rol:
+## 2. Precedencia y Gobernanza Local
 
-* **Agente: Diagramador de Arquitectura**
-  * **Responsabilidad:** Convertir requerimientos, explicaciones de negocio o análisis técnicos en especificaciones de arquitectura estructuradas y plasmarlas en diagramas Draw.io válidos.
-  * **Criterios de Éxito:** El agente nunca debe inventar componentes, estados ni conexiones. Todo debe estar respaldado por la información confirmada por el usuario y respetar el principio KISS (Keep It Simple, Stupid).
+La gobernanza local complementa las reglas globales y prevalece únicamente cuando define una instrucción más específica para este proyecto o una de sus carpetas.
 
----
+Al trabajar sobre una carpeta:
 
-## 2. Habilidades (Skills) y Especialización
+1. Identifica el agente responsable según este archivo.
+2. Aplica sus responsabilidades y criterios de salida.
+3. Consulta en `.agents/skills/` únicamente las skills relevantes para la tarea.
+4. Mantén las reglas globales que no entren en conflicto con la gobernanza local.
 
-Para ejecutar su responsabilidad, el agente cuenta con la siguiente skill especializada ubicada en `.agents/skills/`:
+Ante solapamiento entre agentes, prioriza el más específico al contexto de la tarea. Combina agentes o skills únicamente cuando sus responsabilidades sean complementarias.
 
-* **`diagramador-arquitectura`:** Define el flujo estricto de orquestación (Análisis, Propuesta, Aprobación y Generación XML Multi-Hoja) apoyándose en el estándar y el catálogo de esta carpeta. 
-* El agente **debe** activar esta skill automáticamente ante cualquier solicitud de diagramación de arquitectura.
+## 3. Agentes Especializados del Proyecto
 
----
+- **Agente 1: Diagramador de Arquitectura (`.agents/skills/diagramador-arquitectura/`)**
+  - **Responsabilidad:** convertir información de negocio o técnica confirmada en fichas estructuradas y diagramas Draw.io válidos, editables, trazables y estandarizados.
+  - **Ámbito:** creación, actualización y revisión de diagramas de arquitectura de solución o integración.
+  - **Skill principal:** `diagramador-arquitectura`.
+  - **Criterio de salida:** ficha y Draw.io coherentes entre sí, conformes con el estándar aplicable y guardados en el caso o proyecto activo.
 
-## 3. Precedencia y Reglas
+## 4. Separación de Responsabilidades
 
-1. **Estricto apego al estándar:** Las reglas definidas en el estándar (`skills/diagramador-arquitectura/references/estandar-diagramas-drawio.md`) dictan la nomenclatura y formato de todos los archivos generados. El agente no tiene autoridad para modificar este formato sin permiso.
-2. **Delegación de diseño:** El diseño visual (XML) siempre se delega al `catalogo-elementos-y-estilos.md` y las posiciones físicas a las `reglas-de-armado-de-diagramas.md`.
-3. **Gobernanza global:** Las reglas globales del asistente (ej. firma de documentos como "Jeff") siguen vigentes en todo lo que no entre en conflicto con este archivo local.
+- **`AGENTS.md`:** registra agentes, responsabilidades, ámbitos y reglas de coordinación.
+- **`SKILL.md`:** define propósito, activación, flujo, restricciones, salidas y criterios de cierre de una capacidad específica.
+- **`references/`:** contiene estándares, catálogos y reglas técnicas consultadas por una skill.
+- **`scripts/`:** contiene automatizaciones determinísticas reutilizables.
+- **`assets/`:** contiene recursos que forman parte de los entregables.
+
+## 5. Principios Comunes
+
+- Respeta el alcance y las decisiones explícitas del usuario.
+- No inventes datos, componentes, relaciones ni decisiones.
+- Aplica KISS y evita complejidad que no cambie el resultado.
+- Mantén trazabilidad suficiente entre fuentes, decisiones y entregables.
+- Cuando un agente genere artefactos para un caso o proyecto, guárdalos en ese ámbito y no en este repositorio, salvo instrucción explícita en contrario.

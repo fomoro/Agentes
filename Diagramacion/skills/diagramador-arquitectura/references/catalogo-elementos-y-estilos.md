@@ -32,15 +32,15 @@ La jerarquía es opcional: una zona puede contener frames, componentes o element
 
 | Frame | Forma Draw.io | Color de relleno | Color de gradiente | Dirección | Gradiente | Etiqueta | Tamaño de letra | Estilo de letra | Color de la letra | Sombra |
 |---|---|---:|---:|---|---|---|---:|---|---|---|
-| OnPremise | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#F5F5F5` | `#F5F5F5` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| SAP Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#DAE8FC` | `#7EA6E0` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| Oracle Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#F8CECC` | `#EA6B66` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| Privado Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#D5E8D4` | `#97D077` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| AWS Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#FFCD28` | `#FFA500` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| Microsoft 365 | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#B1DDF0` | — | — | No | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| Salesforce Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#0050EF` | — | — | No | Pestaña del frame | `12 px` | Negrita | Blanco | Sí |
-| GCP Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#F8CECC` | — | — | No | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
-| Microsoft Azure Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1` | `#1BA1E2` | — | — | No | Pestaña del frame | `12 px` | Negrita | Blanco | Sí |
+| OnPremise | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#F5F5F5` | `#F5F5F5` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| SAP Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#DAE8FC` | `#7EA6E0` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| Oracle Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#F8CECC` | `#EA6B66` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| Privado Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#D5E8D4` | `#97D077` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| AWS Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#FFCD28` | `#FFA500` | Sur | Sí | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| Microsoft 365 | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#B1DDF0` | — | — | No | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| Salesforce Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#0050EF` | — | — | No | Pestaña del frame | `12 px` | Negrita | Blanco | Sí |
+| GCP Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#F8CECC` | — | — | No | Pestaña del frame | `12 px` | Negrita | Negro | Sí |
+| Microsoft Azure Nube | `shape=umlFrame; rounded=0; container=1; fontStyle=1; width=150; height=30; whiteSpace=wrap; html=1` | `#1BA1E2` | — | — | No | Pestaña del frame | `12 px` | Negrita | Blanco | Sí |
 
 ### Componentes
 

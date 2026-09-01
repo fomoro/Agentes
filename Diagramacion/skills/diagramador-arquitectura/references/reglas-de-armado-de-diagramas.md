@@ -47,6 +47,7 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 | Entre zonas | Separación horizontal entre swimlanes adyacentes | Mínimo `30 px` |
 | Zona a frame | Margen interno entre el borde de la zona y el frame | Mínimo `40 px` |
 | Márgenes de frame | Distancia entre el borde del frame y sus contenedores o elementos internos | Mínimo `40 px` |
+| Tamaño de frame | Dimensiones mínimas totales de la geometría (ancho x alto) | Mínimo `300 x 200 px` |
 | Entre componentes | Separación mínima vertical y horizontal entre elementos | Mínimo `20 px` |
 
 ## Flujo y orientación

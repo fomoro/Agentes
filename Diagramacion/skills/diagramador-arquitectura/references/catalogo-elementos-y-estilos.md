@@ -114,6 +114,8 @@ Aplica a los componentes y a los elementos de solución e integración. No aplic
 
 ### Conectividad entre plataformas
 
+Esta matriz describe conectividad física y se aplica en ambos sentidos. Para una relación en sentido inverso, intercambia origen y destino, invierte el orden de los tramos y conserva la demarcación. La dirección funcional de la interacción proviene de la ficha y no cambia por esta regla.
+
 | Origen | Tramo de salida | Demarcación | Tramo de llegada | Destino |
 |---|---|---|---|---|
 | OnPremise | FloNetworks DCI | — | — | Microsoft Azure Nube |

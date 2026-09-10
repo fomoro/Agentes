@@ -16,7 +16,7 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 |---|---|
 | Zonas | Usarlas solo cuando aporten una responsabilidad o frontera visible. |
 | Orden | Puede cambiar según la historia que debe explicar el diagrama. |
-| Repetición | Debe repetirse o apilarse según el orden secuencial de la ficha. |
+| Repetición | Repetir una zona solo cuando el flujo de la ficha vuelva a ella y la repetición mejore la secuencia. Cada aparición contiene únicamente los elementos que correspondan a ese tramo. |
 | Frames | Usarlos cuando proveedor, entorno o frontera de red sean relevantes. |
 | Anidación | Cada contenedor debe aportar significado; evitar anidaciones decorativas. |
 
@@ -35,10 +35,10 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 | Regla | Aplicación |
 |---|---|
 | Dirección | Toda relación debe tener origen y destino claros. |
-| Tipo | Usar síncrona o asíncrona según el comportamiento real. |
-| Conectividad entre plataformas | Para cada relación, cruza el entorno confirmado del origen y del destino con la matriz homónima del catálogo y aplica sus tramos y demarcación. Si faltan datos o existe más de una coincidencia, usa Por definir. No deduzcas conectividad por la posición visual. |
-| Etiqueta | Incluirla solo si aporta contexto del tramo, protocolo o medio. |
-| Pivote | Usarlo únicamente para una demarcación o dos tramos diferenciados. |
+| Tipo | Usa el tipo registrado en la ficha. Si figura `Por definir`, conserva el pendiente y no representes la relación como definitiva en el Draw.io. |
+| Conectividad entre plataformas | Para cada relación, cruza los entornos confirmados del origen y del destino con la matriz bidireccional del catálogo y aplica sus tramos y demarcación. Si faltan datos o existe más de una correspondencia válida, registra el caso en `Pendientes`; no infieras conectividad ni la deduzcas por la posición visual. |
+| Etiquetas | Muestra obligatoriamente los nombres de los tramos definidos por la matriz. La etiqueta funcional de la ficha es opcional y solo se muestra cuando aporta información confirmada adicional. |
+| Pivote | Inclúyelo cuando la matriz indique la demarcación `Pivote`; no lo agregues por criterio visual. |
 
 ## Espaciado y dimensiones
 
@@ -64,6 +64,6 @@ Para estilos, elementos y conexiones aprobados, consulta el [Catálogo de conven
 |---|---|
 | Lectura | Se entiende el objetivo y el flujo principal. |
 | Legibilidad | No hay solapamientos ni texto atravesado por líneas. |
-| Consistencia | Se respetan estilos y elementos del catálogo. |
+| Consistencia | Se respetan la ficha, los estilos, los elementos y la conectividad del catálogo. |
 | Precisión | No se representan datos técnicos no confirmados. |
 | Editable | El archivo Draw.io se conserva editable. |

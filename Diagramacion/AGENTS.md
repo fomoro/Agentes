@@ -6,6 +6,10 @@ Este archivo identifica los agentes especializados disponibles en el proyecto y 
 
 Cuando se incorpore un nuevo agente, debe registrarse en la sección **Agentes especializados del proyecto** con su responsabilidad, ámbito y skill principal.
 
+**Autor de entregables:** Sam
+
+Este campo es la fuente canónica del nombre de autor que deben usar las skills del proyecto. Su valor puede cambiar sin modificar las skills.
+
 ## 2. Precedencia y Gobernanza Local
 
 La gobernanza local complementa las reglas globales y prevalece únicamente cuando define una instrucción más específica para este proyecto o una de sus carpetas.
@@ -14,14 +18,14 @@ Al trabajar sobre una carpeta:
 
 1. Identifica el agente responsable según este archivo.
 2. Aplica sus responsabilidades y criterios de salida.
-3. Consulta en `.agents/skills/` únicamente las skills relevantes para la tarea.
+3. Consulta en `skills/` únicamente las skills relevantes para la tarea.
 4. Mantén las reglas globales que no entren en conflicto con la gobernanza local.
 
 Ante solapamiento entre agentes, prioriza el más específico al contexto de la tarea. Combina agentes o skills únicamente cuando sus responsabilidades sean complementarias.
 
 ## 3. Agentes Especializados del Proyecto
 
-- **Agente 1: Diagramador de Arquitectura (`.agents/skills/diagramador-arquitectura/`)**
+- **Agente 1: Diagramador de Arquitectura (`skills/diagramador-arquitectura/`)**
   - **Responsabilidad:** convertir información de negocio o técnica confirmada en fichas estructuradas y diagramas Draw.io válidos, editables, trazables y estandarizados.
   - **Ámbito:** creación, actualización y revisión de diagramas de arquitectura de solución o integración.
   - **Skill principal:** `diagramador-arquitectura`.

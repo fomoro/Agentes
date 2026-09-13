@@ -11,7 +11,7 @@ El backlog contiene únicamente trabajo pendiente con una condición de cierre. 
 | Pendiente | Qué falta | Condición de cierre |
 | --- | --- | --- |
 | Alinear el prototipo | Aplicar la anatomía y seleccionar reglas coherentes del banco. | Prototipo revisado contra la [especificación](../Scope/especificacion_scope.md). |
-| Concretar el proyecto de prueba | Elegir una carpeta destino independiente de la fábrica y registrar versión de Codex y permisos. | Ficha de [validación local](../Scope/validacion_scope_codex_local.md) completada. |
+| Concretar el proyecto de prueba | Elegir el asistente y una carpeta destino independiente; documentar su mecanismo de carga y sus controles. | [Validación por entorno](../Scope/validacion_scope_por_entorno.md) completada con evidencia. |
 | Validar el comportamiento | Ejecutar los casos de carga, conflicto, ausencia de skill y modificación de gobernanza. | Resultados observados y limitaciones registrados; no basta con definir los casos. |
 | Revisar las reglas heredadas antes de seleccionarlas | El banco conserva reglas anteriores sobre autoridad absoluta, descarga de memoria y estilos obligatorios. | Las reglas elegidas para el prototipo respetan el contrato actual y no introducen contradicciones. No exige reescribir todo el banco. |
 

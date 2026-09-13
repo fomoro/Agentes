@@ -92,4 +92,4 @@ Una bandera documental expresa una política; no demuestra por sí sola un bloqu
 
 La revisión documental comprueba este contrato. La comprobación operativa del prototipo se realiza después en un entorno declarado; no se da por ejecutada por completar esta especificación.
 
-El primer entorno elegido es Codex en un proyecto local. El mecanismo propuesto y los casos se mantienen en la [ficha de validación](validacion_scope_codex_local.md); la carpeta destino y la ejecución permanecen pendientes.
+La validación usa casos comunes y una configuración específica del entorno evaluado. El mecanismo y los casos se mantienen en la [validación por entorno](validacion_scope_por_entorno.md); seleccionar el entorno, completar sus datos y ejecutar las pruebas permanece pendiente.

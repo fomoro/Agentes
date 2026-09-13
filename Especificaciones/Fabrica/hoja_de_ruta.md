@@ -14,8 +14,8 @@
 | [x] | Organizar Especificaciones por fábrica, gobernanza, Scope y skills. |
 | [x] | Separar los contratos de Scope y skills y aprobar las cuatro responsabilidades del [Scope](../Scope/especificacion_scope.md). |
 | [x] | Delimitar principios transversales, conciliar la estructura real y depurar los vacíos de diseño resueltos. |
-| [x] | Elegir Codex local y definir la [ficha de validación](../Scope/validacion_scope_codex_local.md). |
-| [ ] | Concretar la carpeta destino y registrar versión, revisión y permisos antes de probar. |
+| [x] | Diseñar la [validación por entorno](../Scope/validacion_scope_por_entorno.md) con casos comunes y configuración adaptable al asistente evaluado. |
+| [ ] | Elegir el entorno de la primera ejecución, concretar la carpeta destino y completar su configuración antes de probar. |
 | [ ] | Alinear el [prototipo existente](../../Capacidades/Propuestas/Propuestas_Scope/prototipo_AGENTS_Scope.md) con la especificación actual. |
 | [ ] | Revisar el prototipo contra sus criterios de aceptación y validar su uso en un entorno declarado. |
 

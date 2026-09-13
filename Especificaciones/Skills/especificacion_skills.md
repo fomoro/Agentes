@@ -15,7 +15,7 @@ Todo skill certificado debe ser una **carpeta** con la siguiente estructura modu
   - `SKILL.md`: **(Obligatorio)** Archivo maestro con bloque YAML en la cabecera.
   - `references/`: *(Opcional)* Subcarpeta para documentación base o manuales técnicos.
   - `examples/`: *(Opcional)* Subcarpeta para guardar entregables perfectos de referencia.
-  - `scripts/`: *(Opcional)* Herramientas (Python/PS) que el agente ejecute en su trabajo.
+  - `scripts/`: *(Opcional)* Herramientas ejecutables compatibles con el entorno destino.
 
 ### 2. Reglas del `SKILL.md` (El "Cómo")
 - **Enfoque Directo:** El archivo debe darle a la IA el "Paso a paso" operativo exacto, no teoría.

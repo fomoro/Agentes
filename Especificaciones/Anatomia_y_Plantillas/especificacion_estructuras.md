@@ -18,19 +18,17 @@
 
 La plantilla física final de `AGENTS_Scope.md` debe estar dividida exactamente en 4 secciones innegociables:
 
-#### A. Contexto Base del Proyecto
-- Define la pila tecnológica estricta o convenciones de nombres que aplican para todo el repositorio.
+#### A. Identidad y Contexto (El "Quién y Dónde")
+- **Propósito Anatómico:** Establecer la pila tecnológica innegociable, las convenciones del repositorio y la identidad base del proyecto para evitar alucinaciones de contexto.
 
-#### B. Reglas de Precedencia
-- Declara que `AGENTS_Scope.md` es la fuente canónica local y prevalece sobre la gobernanza global.
-- Establece que las reglas de un *Skill* complementan al Scope, pero jamás lo contradicen.
+#### B. Precedencia y Jerarquía (La "Ley")
+- **Propósito Anatómico:** Establecer la autoridad de este archivo sobre la gobernanza global y definir cómo se deben resolver los conflictos entre el Scope y los Skills locales.
 
-#### C. Motor de Selección de Skills (Carga Dinámica)
-- Instrucción de enrutamiento: *"Lee el contenido de `.agents/skills/`. Carga en tu memoria únicamente la skill que resuelva el requerimiento actual."*
-- Regla de combinación: *"Si la tarea requiere múltiples disciplinas, aplica las skills de forma secuencial, nunca concurrente."*
+#### C. Motor de Selección de Skills (El "Enrutador")
+- **Propósito Anatómico:** Alojar la lógica operativa. Aquí se define el mecanismo de carga dinámica (Lazy Loading) y la política de ejecución (ej. secuencial vs concurrente) para que la IA sepa cómo delegar tareas.
 
-#### D. Protección de Gobernanza (Bloqueo Estricto)
-- Candado de seguridad: *"Ningún agente o skill tiene autorización para modificar este archivo ni la carpeta `.agents/skills/` salvo orden explícita del usuario."*
+#### D. Protección de Gobernanza (El "Candado")
+- **Propósito Anatómico:** Alojar las restricciones de seguridad (ej. banderas booleanas) que impiden que la IA modifique su propio core de reglas o las carpetas del sistema sin autorización humana explícita.
 
 ### 2. Criterios de Aceptación (DoD)
 

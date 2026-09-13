@@ -32,7 +32,6 @@
 | [x] | Refinar Arquitectura: Separar Principios, Banco de Reglas y Anatomía Estructural |
 | [x] | Diseñar propuestas teóricas de Gobernanza para debatir enfoques (ADR) |
 | [x] | Seleccionar la propuesta ganadora y materializar su prototipo físico en el Laboratorio (`Capacidades/Propuestas/`) |
-| [ ] | **Deuda Técnica:** Diseñar la anatomía para `AGENTS_Global.md` y `AGENTS_Cloud.md` |
 | [ ] | Oficializar el sistema de gobernanza moviéndolo a `Capacidades/Base/` |
 
 ---

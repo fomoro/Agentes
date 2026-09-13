@@ -5,7 +5,7 @@
 
 ---
 
-## A. Contexto Base del Proyecto
+## A. Identidad y Contexto
 
 > Define aquí la pila tecnológica estricta o las convenciones innegociables de este repositorio.
 - **Pila Tecnológica:** [Ej. React + Node.js + PostgreSQL]
@@ -13,7 +13,7 @@
 
 ---
 
-## B. Reglas de Precedencia y Gobernanza
+## B. Precedencia y Jerarquía
 
 - **Precedencia Local:** Este archivo (`AGENTS_Scope.md`) es la fuente canónica local y **prevalece** sobre la gobernanza global ante cualquier conflicto.
 - **Jerarquía Estricta:** Las reglas de un *Skill* complementan este Scope, pero jamás tienen permiso de contradecirlo.
@@ -22,7 +22,7 @@
 
 ---
 
-## C. Motor de Selección de Skills (Carga Dinámica)
+## C. Motor de Selección de Skills
 
 > **Instrucción de Enrutamiento:** Lee el contenido de la carpeta `.agents/skills/`. Tu deber es orquestar las capacidades disponibles.
 
@@ -33,7 +33,7 @@
 
 ---
 
-## D. Protección de Gobernanza (Bloqueo Estricto)
+## D. Protección de Gobernanza
 
 - **Bandera de Seguridad:** `permitir_cambios_gobernanza: false`
 - **Inviolabilidad:** Ningún agente o skill tiene autorización para modificar este archivo ni alterar la carpeta `.agents/skills/` salvo que el usuario lo ordene explícitamente.

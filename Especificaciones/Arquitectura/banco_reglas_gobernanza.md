@@ -15,6 +15,7 @@ Este documento centraliza todas las "buenas prácticas" y patrones rescatados de
 | Regla | Descripción Operativa | Origen Rescate |
 | :--- | :--- | :--- |
 | **Bandera de Protección** | Exigir la variable `permitir_cambios_gobernanza: false`. | `AGENTES.md` |
+| **Inviolabilidad** | Prohibir que la IA modifique su Scope o la carpeta `.agents/skills/` sin orden humana explícita. | `AGENTES.md` |
 | **Restablecimiento** | Si la bandera cambia a `true`, la IA debe volverla a `false` antes de cerrar su turno. | `AGENTES.md` |
 | **Precedencia Local** | La gobernanza local (Scope) **prevalece** sobre la global ante cualquier conflicto. | Cavipetrol / Pipe |
 | **Jerarquía Estricta** | Una gobernanza inferior puede agregar restricciones, jamás debilitar bloqueos. | `AGENTES.md` |

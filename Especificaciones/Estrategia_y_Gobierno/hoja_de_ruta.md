@@ -21,19 +21,19 @@
 
 ---
 
-## 2. Definición del "Tablero de Juego" (Scope)
+## 2. Definición del "Tablero de Juego" (Gobernanza Base)
 **Estado:** [/] En Progreso  
-**Argumento:** El Scope va antes que los Skills. Es un error programar "piezas" sin haber diseñado las "reglas del tablero".
+**Argumento:** La gobernanza va antes que los Skills. Es un error programar "piezas" sin haber diseñado las "reglas del tablero".
 
 | Estado | Tarea |
 | :---: | :--- |
-| [x] | Definir la estructura estricta del Scope y del Skill en `tobe.md` |
-| [x] | Consolidar el `banco_reglas_gobernanza.md` con insumos viejos |
-| [x] | Validar y expandir el Banco (Inyectar 2+ patrones Antigravity por tabla) |
-| [x] | Documentar las 3 tesis *teóricas* de Scope (Estricto, Procesal, Híbrido) en ADR |
-| [ ] | **Punto de Control:** Validar la versatilidad del AGENTS_Scope antes de ensamblar |
-| [ ] | Materializar los prototipos físicos de Scope (`v1`, `v2`, `v3`) |
-| [ ] | Elegir diseño ganador y construir el `Capacidades/01_Base/AGENTS_Scope.md` oficial |
+| [x] | Definir la estructura estricta del Scope y del Skill (`especificacion_estructuras.md`) |
+| [x] | Consolidar el catálogo `banco_reglas_gobernanza.md` con insumos viejos |
+| [x] | Refinar Arquitectura: Separar Principios, Banco de Reglas y Anatomía Estructural |
+| [x] | Diseñar propuestas teóricas de Gobernanza para debatir enfoques (ADR) |
+| [x] | Seleccionar la propuesta ganadora y materializar su prototipo físico en el Laboratorio (`Capacidades/Propuestas/`) |
+| [ ] | **Deuda Técnica:** Diseñar la anatomía para `AGENTS_Global.md` y `AGENTS_Cloud.md` |
+| [ ] | Oficializar el sistema de gobernanza moviéndolo a `Capacidades/Base/` |
 
 ---
 

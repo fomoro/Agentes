@@ -1,21 +1,22 @@
-# Tesis de Diseño: Estructuras del AGENTS_Scope
+# Tesis de Arquitectura: Patrón Enrutador (AGENTS_Scope)
 
-Este documento defiende, fundamenta y compara las tres propuestas arquitectónicas creadas en esta carpeta para fungir como el futuro `AGENTS_Scope.md`.
+Este documento define la fundamentación teórica y arquitectónica oficial sobre cómo debe operar el archivo de gobernanza local (`AGENTS_Scope.md`) dentro de los repositorios de los clientes.
 
-## 1. Tesis de V1 (Enfoque Estricto / El Dictador)
-**El Argumento:** La IA por defecto tiende a sobrepensar o alucinar pasos cuando tiene libertad. Si la limitamos a elegir UNA sola skill y ejecutarla de forma aislada, minimizamos a cero el margen de error y protegemos el entorno.
-- **Por qué funciona:** Es a prueba de balas. Cero creatividad, 100% obediencia operativa.
-- **Cuándo falla:** Es inútil cuando la tarea es compleja y requiere que el agente diseñe una solución que cruce múltiples disciplinas (ej. diseñar una Base de Datos y luego maquetar el UI consecuente).
+## 1. El Problema (Por qué fallan los modelos tradicionales)
+Si se le da libertad absoluta a una IA (Enfoque Libre), tiende a sobrepensar, alucinar flujos o modificar archivos indebidos. Si por el contrario se le restringe a ejecutar pasos algorítmicos inmutables (Enfoque Burocrático), pierde su capacidad de razonamiento dinámico y consume un exceso de tokens intentando validar pasos rígidos para tareas simples.
 
-## 2. Tesis de V2 (Enfoque Procesal / El Algoritmo)
-**El Argumento:** Las IAs operan en su máximo potencial cuando se les fuerza a seguir un algoritmo de pasos explícitos (`Chain of Thought`). Obligarlo a seguir un flujo innegociable de (Descubrimiento -> Orquestación -> Ejecución Secuencial) garantiza trazabilidad mental.
-- **Por qué funciona:** Deja un rastro de pensamiento clarísimo. Es excelente para depurar (debugging) por qué un agente tomó cierta decisión.
-- **Cuándo falla:** Genera un exceso de "burocracia" cognitiva. Consume demasiados tokens analizando el flujo para tareas que a lo mejor eran simples.
+## 2. La Solución: El Patrón "Router"
+La arquitectura oficial para el Scope se basa en el patrón de "Enrutador Elástico". Este modelo logra el equilibrio perfecto entre seguridad extrema y agilidad operativa.
 
-## 3. Tesis de V3 (Enfoque Híbrido / El Equilibrio)
-**El Argumento:** Necesitamos seguridad extrema para los archivos físicos de gobernanza, pero flexibilidad operativa en la mente de la IA. Bloqueamos la escritura de reglas con un candado de seguridad, pero le damos barandas (no rieles) a la IA para que decida cómo secuenciar dinámicamente los skills.
-- **Por qué funciona:** Confía en la alta capacidad de razonamiento del modelo (Gemini), dándole un marco de "Secuencialidad" (el output de uno es el input del otro) pero sin forzar un algoritmo pesado.
-- **Cuándo falla:** Exige que los `SKILL.md` individuales estén impecablemente redactados; si un skill es ambiguo, la IA podría combinarlo mal porque tiene cierta libertad de orquestación.
+### A. Aislamiento y Seguridad (Las Barandas)
+El Scope bloquea físicamente la capacidad de la IA para auto-modificar sus propias reglas (`permitir_cambios_gobernanza: false`). La IA opera en un entorno protegido donde las directrices base son inmutables, evitando "jailbreaks" accidentales.
 
-## Decisión de Arquitectura (Pendiente)
-Debemos debatir estas tesis basándonos en cómo quieres que opere tu Fábrica. ¿Queremos agentes súper rígidos (V1), agentes altamente burocráticos y trazables (V2), o agentes dinámicos protegidos por barandas (V3)?
+### B. Orquestación y Descarga Cognitiva
+En lugar de dictarle a la IA el "paso a paso" de cómo ejecutar una tarea de ingeniería, el Scope simplemente actúa como un semáforo inteligente que delega la carga cognitiva hacia módulos especializados (Skills).
+- **Ejemplo:** El Scope no contiene reglas sobre bases de datos; solo contiene la instrucción: *"Si el usuario pide persistencia, descarga tus instrucciones actuales y carga la carpeta `Skill_DB`"*.
+
+### C. Secuencialidad Dinámica
+Se confía en la altísima capacidad de razonamiento del LLM para determinar qué skills se necesitan y en qué orden. Se impone una única regla transversal: **Secuencialidad estricta** (el output de un skill es el input innegociable del siguiente) para evitar alucinaciones por concurrencia.
+
+## 3. Veredicto Arquitectónico
+El `AGENTS_Scope.md` no es una Biblia procedimental, es un **Orquestador Inteligente**. Su única responsabilidad es asegurar que la IA opere de forma segura y sepa exactamente qué módulo cargar para resolver el requerimiento, garantizando versatilidad desde un script de fin de semana hasta un ecosistema corporativo masivo.

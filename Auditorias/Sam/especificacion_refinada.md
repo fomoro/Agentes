@@ -4,7 +4,7 @@
 - Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
 - Autor: Sam (Asistente IA del Sr Wolfan)
 
-**Estado: diseño propuesto, sujeto a aprobación.** Especificación consolidada para revisar antes de distribuir los cambios entre los documentos originales. Justificación: [ADR-01 a ADR-05](decisiones_arquitectura.md). Las reglas operativas concretas se detallan en la [revisión del banco](revision_banco_reglas.md).
+**Estado: diseño candidato con incorporación parcial.** La ubicación de auditorías y el retiro de cuotas de líneas ya se incorporaron en las especificaciones; el resto continúa propuesto. Justificación: [ADR-01 a ADR-05](decisiones_arquitectura.md). Las reglas operativas concretas se detallan en la [revisión del banco](revision_banco_reglas.md).
 
 ## 1. Propósito y fronteras
 
@@ -17,10 +17,11 @@ Se conserva la separación existente:
 | Especificaciones | Definir intención, decisiones, contratos y validación. | Documentación de diseño; no paquetes operativos ni prototipos de gobernanza. |
 | Capacidades | Alojar prototipos y piezas reutilizables según madurez. | La existencia del archivo no equivale a certificación. |
 | Insumos | Conservar antecedentes y materia prima. | Nada se activa por estar disponible; requiere selección y revisión. |
+| Auditorías — área transversal | Registrar evaluaciones, razones y propuestas. | Distingue hallazgos, diseño candidato y cambios incorporados; no reemplaza las especificaciones vigentes. |
 
 Las rutas de instalación pertenecen al proyecto destino. No se crean entradas de gobernanza activa en la raíz de la fábrica. Leer y editar documentación, inspeccionar cambios y verificar enlaces son labores de mantenimiento compatibles con su naturaleza documental.
 
-Este refinamiento permanece dentro de Especificaciones. No define ni ejecuta migraciones físicas de Capacidades.
+Este diseño candidato se conserva en la auditoría de Sam. Las reglas incorporadas se mantienen en Especificaciones y se identifican en el [registro de incorporación](README.md). No define ni ejecuta migraciones físicas de Capacidades.
 
 ## 2. Contratos de gobernanza
 
@@ -62,7 +63,7 @@ Se conservan las cuatro secciones actuales:
 | C. Motor de selección | Descubrimiento, elección, ausencia de skill, dependencias y resultado esperado. | La elección se explica por la tarea y puede comprobarse. |
 | D. Protección de gobernanza | Cambios sujetos a autorización y distinción entre política escrita y control técnico disponible. | Se identifica qué protección existe y cómo se verifica. |
 
-**Aceptación documental:** las cuatro responsabilidades están cubiertas sin duplicar procedimientos. Menos de 60 líneas se mantiene como objetivo orientativo para la base; excederlo exige explicar la necesidad, no comprimir texto hasta perder claridad. La versión configurada puede crecer con restricciones reales del proyecto.
+**Aceptación documental:** las cuatro responsabilidades están cubiertas con instrucciones claras y sin duplicaciones ni contradicciones. No se fija mínimo, máximo ni objetivo de líneas. El Scope conserva contexto, gobierno y enrutamiento; el detalle especializado se remite a las skills y referencias pertinentes mediante enlaces verificables. La extensión se adapta a la necesidad real sin sacrificar condiciones ni restricciones para reducir tamaño.
 
 ## 3. Autoridad y autorización
 

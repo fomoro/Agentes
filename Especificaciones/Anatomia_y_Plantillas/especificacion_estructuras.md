@@ -1,8 +1,8 @@
 # Especificación de Estructuras: Fábrica de Agentes
 
 - Actualizado: el 2026-09-12
-- Rol de ejecución: Arquitecto Empresarial y Escritor Técnico
-- Autor: Jeff (Asistente IA del Sr Wolfan)
+- Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
+- Autor: Sam (Asistente IA del Sr Wolfan)
 
 **Propósito Global:** Este documento define la anatomía estricta y agnóstica que deben tener todos los archivos de gobernanza (`AGENTS_Scope.md`) y las carpetas de módulos (`Skills`). Esta es la base arquitectónica ("El framework") para construir piezas que funcionen de forma estandarizada en cualquier proyecto cliente.
 
@@ -32,7 +32,10 @@ La plantilla física final de `AGENTS_Scope.md` debe estar dividida exactamente 
 
 ### 2. Criterios de Aceptación (DoD)
 
-- El archivo debe pesar menos de 60 líneas en su forma base (optimizado).
+- No se establece un mínimo, máximo ni objetivo de líneas. La extensión responde al contexto y a las reglas necesarias del proyecto.
+- Las cuatro secciones deben cubrir sus responsabilidades con instrucciones claras, sin contradicciones ni duplicaciones.
+- El Scope conserva las decisiones de gobierno y enrutamiento; los procedimientos especializados y referencias extensas se alojan en las skills o documentos correspondientes, con enlaces verificables.
+- La concisión se evalúa eliminando contenido redundante, no suprimiendo restricciones, condiciones o contexto necesarios para actuar correctamente.
 - Debe ser 100% universal (portable a un proyecto de Bases de Datos o de Aplicaciones Web sin necesidad de reescribir su lógica de enrutamiento).
 
 ---

@@ -14,24 +14,24 @@ Para mantener la pureza y el Principio de Responsabilidad Única, las especifica
 
 ### 1. `Arquitectura/` (El "Qué construimos")
 Centraliza las decisiones de alto nivel y el diseño estructural del sistema.
-- **`plano_arquitectonico_Blueprint.md`:** El mapa oficial de las carpetas y reglas de contenido.
-- **`banco_reglas_gobernanza.md`:** El catálogo o "menú" maestro de reglas de gobernanza a inyectar.
+- [Plano arquitectónico](Arquitectura/plano_arquitectonico_Blueprint.md): mapa de carpetas y responsabilidades.
+- [Banco de reglas](Arquitectura/banco_reglas_gobernanza.md): catálogo de reglas de gobernanza.
 
 ### 2. `Estrategia_y_Gobierno/` (El "Cómo trabajamos")
 Centraliza el meta-proceso y la gestión interna de la Fábrica.
-- **`principios_fabrica.md`:** La "Constitución" de la Fábrica y las meta-reglas de la IA.
-- **`hoja_de_ruta.md`:** El registro cronológico y el avance de fases del proyecto.
-- **`backlog_especificaciones.md`:** El registro de ideas, tareas pendientes (Post-Mortem) y reglas en borrador.
+- [Principios de la fábrica](Estrategia_y_Gobierno/principios_fabrica.md): criterios de diseño y trabajo.
+- [Hoja de ruta](Estrategia_y_Gobierno/hoja_de_ruta.md): avance y fases del proyecto.
+- [Backlog](Estrategia_y_Gobierno/backlog_especificaciones.md): ideas, pendientes y reglas en borrador.
 
 ### 3. `Anatomia_y_Plantillas/` (El "Estándar Técnico")
 Centraliza la especificación técnica de bajo nivel para los entregables.
-- **`especificacion_estructuras.md`:** Define la anatomía estricta y agnóstica de las plantillas (`AGENTS_Scope.md`) y los módulos (`Skills`).
-- **`tesis_patron_router.md`:** La fundamentación teórica que explica por qué el Scope usa un patrón orquestador.
+- [Especificación de estructuras](Anatomia_y_Plantillas/especificacion_estructuras.md): anatomía y aceptación de Scope y skills.
+- [Tesis del patrón Router](Anatomia_y_Plantillas/tesis_patron_router.md): fundamento del Scope como enrutador.
 
 ---
 
-## Revisión de calidad propuesta
+## Auditorías y trazabilidad
 
-La [revisión de Sam](Sam/README.md) contiene diagnóstico, cinco ADR con alternativas y tradeoffs, especificación refinada, revisión de las 37 reglas y plan de validación. Es un espacio de revisión dentro de Especificaciones, no un cuarto dominio de la fábrica.
+Las revisiones se alojan en [Auditorías](../Auditorias/README.md), separadas de las especificaciones vigentes. La [auditoría de Sam](../Auditorias/Sam/README.md) contiene diagnóstico, cinco ADR, diseño candidato, revisión del banco y plan de validación.
 
-**Estado:** propuesta pendiente de aprobación del Sr Wolfan. Los documentos anteriores se conservan como referencia vigente; la revisión no oficializa cambios ni implementa capacidades. Después de decidir los ADR se incorporará únicamente lo aceptado en sus fuentes correspondientes.
+**Ajustes incorporados:** ubicación de auditorías y eliminación del límite de líneas del Scope, por solicitud del Sr Wolfan. Los demás cambios de arquitectura continúan como propuestas; el registro de incorporación se mantiene en la auditoría.

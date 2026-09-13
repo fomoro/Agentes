@@ -8,7 +8,7 @@
 
 ## 1. Estado y criterio de promoción
 
-La [hoja de ruta vigente](../Estrategia_y_Gobierno/hoja_de_ruta.md) declara la fase 2 en progreso y la oficialización pendiente. Esta revisión no modifica ese estado ni interpreta la existencia de archivos como aprobación.
+La [hoja de ruta vigente](../../Especificaciones/Estrategia_y_Gobierno/hoja_de_ruta.md) declara la fase 2 en progreso y la oficialización pendiente. Esta revisión no modifica ese estado ni interpreta la existencia de archivos como aprobación.
 
 | Estado de una pieza | Evidencia necesaria | Qué todavía no acredita |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ La observación de conducta comprueba un caso; no demuestra obediencia universal
 
 | Pendiente | Prioridad | Condición de cierre |
 | --- | --- | --- |
-| Resolver ADR-01 a ADR-05 | Alta | Decisión explícita del Sr Wolfan, sin interpretar silencio como aceptación. |
+| Resolver propuestas restantes de ADR-01 a ADR-05 | Alta | Decisión explícita del Sr Wolfan; el retiro de cuotas de líneas del ADR-04 ya está incorporado, sin aceptar por extensión el resto. |
 | Actualizar anatomías Cloud y Global en su fuente vigente | Alta | Incorporación de lo aprobado y eliminación de contradicciones con Scope. |
 | Elegir primer entorno y mecanismo de carga | Alta | Ficha completa y verificable; hoy no se presume un proveedor. |
 | Implementar y probar Skill Cero | Alta | E04 y E05 completados con evidencia. |
@@ -72,10 +72,11 @@ La observación de conducta comprueba un caso; no demuestra obediencia universal
 
 Resultado de revisión documental del 2026-09-12:
 
-- Cinco documentos de revisión enlazados desde su índice, accesible desde el README principal.
+- Cinco documentos de revisión enlazados desde su índice, accesible desde el índice de auditorías y el README de Especificaciones.
 - Las 37 reglas originales tienen disposición y los cuatro borradores adicionales se revisan por separado.
-- Cinco ADR identificados como propuestos, sin aprobaciones atribuidas al usuario.
-- Enlaces locales de los documentos revisados resueltos y cambios limitados a Especificaciones.
+- Cinco ADR con estado explícito: cuatro propuestos y uno parcialmente incorporado sobre extensión documental, conforme a la solicitud del usuario.
+- Enlaces locales resueltos después del traslado; reorganización limitada a Especificaciones y Auditorías.
+- Retirados los objetivos de líneas de los criterios vigentes y del diseño candidato; las cifras anteriores se conservan únicamente como antecedentes de la corrección.
 - Criterios V01–V10 definidos, pendientes de ejecución operativa.
 
 La revisión documental no acredita las pruebas V01–V10 ni demuestra comportamiento del modelo o aislamiento técnico.

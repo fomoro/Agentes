@@ -1,14 +1,14 @@
 # Plano Arquitectónico (Blueprint)
 
 - Actualizado: el 2026-09-12
-- Rol de ejecución: Analista y Arquitecto Empresarial
-- Autor: Jeff (Asistente IA del Sr Wolfan)
+- Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
+- Autor: Sam (Asistente IA del Sr Wolfan)
 
 Este documento es el mapa oficial de cómo está estructurado tu entorno de agentes. Y sí, es un documento vivo: irá evolucionando a medida que refinemos la arquitectura.
 
 ## 1. Topología de la Fábrica (Dominios)
 
-El repositorio está dividido arquitectónicamente en tres grandes dominios de responsabilidad. La mezcla de archivos entre dominios está estrictamente prohibida.
+El repositorio conserva tres dominios de producto y un área transversal de auditoría. Cada documento se aloja según su responsabilidad; las revisiones no sustituyen las fuentes vigentes por estar disponibles.
 
 ### Dominio A: Diseño y Estrategia (`Especificaciones/`)
 | Carpeta | Propósito (El "Qué") | Regla Estricta |
@@ -27,6 +27,15 @@ El repositorio está dividido arquitectónicamente en tres grandes dominios de r
 | Carpeta | Propósito (Materia Prima) | Regla Estricta |
 | :--- | :--- | :--- |
 | `Insumos/` | Reciclaje y Raw Data | Única carpeta autorizada para guardar código "legacy" y apuntes crudos. |
+
+### Área transversal: Auditorías (`Auditorias/`)
+
+| Carpeta | Propósito | Regla de contenido |
+| :--- | :--- | :--- |
+| `Auditorias/` | Índice de revisiones y evaluaciones. | Remite a las carpetas de auditoría y a las especificaciones vigentes. |
+| `Auditorias/Sam/` | Hallazgos, ADR, alternativas y propuestas de Sam. | Separa propuestas de cambios incorporados; no contiene capacidades operativas. |
+
+El [índice de auditorías](../../Auditorias/README.md) permite localizar las revisiones. Al aceptar un cambio, su regla vigente se incorpora en Especificaciones y la auditoría conserva el motivo y estado. No se mantienen dos fuentes vigentes para el mismo contrato.
 
 ## 2. Topología de Gobernanza (La Trinidad)
 

@@ -24,9 +24,9 @@ Esta sección centraliza todas las ideas en progreso, reglas en borrador y tarea
 - [ ] **Anatomía de las capas Global y Cloud:** Definir la estructura exacta que deberán tener `AGENTS_Global.md` y `AGENTS_Cloud.md` (actualmente solo tenemos el diseño de `AGENTS_Scope.md`).
 - [ ] **Diseño del Mecanismo de Despliegue:** Especificar cómo funcionará el "Skill Inicializador" encargado de copiar e inyectar los archivos de la Fábrica hacia los repositorios de los clientes.
 - [ ] **Construcción del "Skill Cero" (Prueba de Concepto):** Construir al menos un Skill de prueba real (ej. `Skill_Analista`) para validar que las reglas que diseñamos realmente funcionan en la práctica.
-- [ ] **Autoridad y protección verificable:** Resolver los conflictos de precedencia y distinguir política documental de controles técnicos; propuesta en el [ADR-01](../Sam/decisiones_arquitectura.md).
-- [ ] **Compatibilidad y evidencia de promoción:** Definir el primer entorno, su mecanismo de carga y pruebas necesarias para certificar capacidades; criterios en el [plan de validación](../Sam/validacion_y_evolucion.md).
-- [ ] **Conciliación y trazabilidad:** Contrastar topología declarada con piezas reales e identificar fuentes concretas de las reglas rescatadas; detalle en los [pendientes del refinamiento](../Sam/validacion_y_evolucion.md).
+- [ ] **Autoridad y protección verificable:** Resolver los conflictos de precedencia y distinguir política documental de controles técnicos; propuesta en el [ADR-01](../../Auditorias/Sam/decisiones_arquitectura.md).
+- [ ] **Compatibilidad y evidencia de promoción:** Definir el primer entorno, su mecanismo de carga y pruebas necesarias para certificar capacidades; criterios en el [plan de validación](../../Auditorias/Sam/validacion_y_evolucion.md).
+- [ ] **Conciliación y trazabilidad:** Contrastar topología declarada con piezas reales e identificar fuentes concretas de las reglas rescatadas; detalle en los [pendientes del refinamiento](../../Auditorias/Sam/validacion_y_evolucion.md).
 
 ---
 
@@ -38,9 +38,12 @@ Esta sección centraliza todas las ideas en progreso, reglas en borrador y tarea
 
 ## 4. Refinamiento propuesto por Sam
 
-- [x] Documentar la [revisión de calidad](../Sam/README.md), sin sustituir las decisiones anteriores.
-- [ ] Resolver los [cinco ADR propuestos](../Sam/decisiones_arquitectura.md): autoridad y controles, enrutamiento, portabilidad, promoción por evidencia y proporcionalidad de reglas.
+- [x] Documentar la [revisión de calidad](../../Auditorias/Sam/README.md), sin sustituir las decisiones anteriores.
+- [ ] Resolver las propuestas restantes de los [cinco ADR](../../Auditorias/Sam/decisiones_arquitectura.md): autoridad y controles, enrutamiento, portabilidad, promoción por evidencia y proporcionalidad de reglas. El retiro de cuotas de líneas del ADR-04 ya está incorporado.
 - [ ] Incorporar únicamente lo aprobado en las especificaciones vigentes y conciliar su estado en la hoja de ruta.
-- [ ] Atender los [pendientes y criterios de cierre](../Sam/validacion_y_evolucion.md): integración, protección verificable, topología y trazabilidad histórica, además de los vacíos ya registrados.
+- [ ] Atender los [pendientes y criterios de cierre](../../Auditorias/Sam/validacion_y_evolucion.md): integración, protección verificable, topología y trazabilidad histórica, además de los vacíos ya registrados.
 
 La existencia del refinamiento no equivale a aprobación ni a pruebas operativas ejecutadas. El detalle se mantiene en la revisión para evitar duplicar estados durante el debate.
+
+- [x] Reorganizar la navegación hacia Auditorías y reflejar su ubicación en el blueprint.
+- [x] Eliminar el límite de líneas del Scope y sus variantes orientativas; sustituirlo por cobertura, claridad y ausencia de duplicaciones en los criterios de aceptación.

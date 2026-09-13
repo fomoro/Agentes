@@ -4,7 +4,7 @@
 - Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
 - Autor: Sam (Asistente IA del Sr Wolfan)
 
-**Estado: disposición propuesta de las 37 reglas del [banco original](../Arquitectura/banco_reglas_gobernanza.md).** No se eliminó ni sustituyó ninguna regla original. Justificación estructural: [ADR](decisiones_arquitectura.md). Contexto de aplicación: [especificación refinada](especificacion_refinada.md).
+**Estado: disposición propuesta de las 37 reglas del [banco original](../../Especificaciones/Arquitectura/banco_reglas_gobernanza.md).** No se eliminó ni sustituyó ninguna regla original. Justificación estructural: [ADR](decisiones_arquitectura.md). Contexto de aplicación: [especificación refinada](especificacion_refinada.md).
 
 Los nombres de las reglas identifican el antecedente; la columna de redacción indica el comportamiento propuesto. El destino señala el dueño conceptual, no una nueva fuente de autoridad. Todas las redacciones son propuestas de Sam; las etiquetas históricas de proveedores no se consideran fuentes verificadas.
 
@@ -77,7 +77,7 @@ Los nombres de las reglas identifican el antecedente; la columna de redacción i
 
 ## Borradores adicionales del backlog
 
-Los cuatro borradores del [backlog, sección 1](../Estrategia_y_Gobierno/backlog_especificaciones.md) no se cuentan otra vez entre las 37 reglas.
+Los cuatro borradores del [backlog, sección 1](../../Especificaciones/Estrategia_y_Gobierno/backlog_especificaciones.md) no se cuentan otra vez entre las 37 reglas.
 
 | Borrador | Disposición propuesta |
 | --- | --- |

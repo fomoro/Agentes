@@ -4,7 +4,7 @@
 - Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
 - Autor: Sam (Asistente IA del Sr Wolfan)
 
-**Estado de todos los ADR: propuesto. Aprobador: Sr Wolfan.** No hay aprobaciones registradas. Los identificadores de hallazgos se resuelven en el [diagnóstico](README.md). El diseño resultante está en la [especificación refinada](especificacion_refinada.md).
+**Estado: ADR-01, ADR-02, ADR-03 y ADR-05 propuestos; ADR-04 con incorporación parcial sobre extensión documental. Aprobador: Sr Wolfan.** El retiro de cuotas de líneas responde a su solicitud; no implica aceptación del resto del ADR-04. Los identificadores de hallazgos y cambios incorporados se resuelven en el [diagnóstico](README.md). El diseño resultante está en la [especificación refinada](especificacion_refinada.md).
 
 ## ADR-01 — Separar responsabilidades, autoridad y controles
 
@@ -76,7 +76,17 @@
 
 **Contexto:** H07, H08 y H12. Carpeta, longitud y existencia de archivos no prueban que un diseño funcione.
 
-**Decisión propuesta:** distinguir propuesta, aprobación de diseño, validación operativa y disponibilidad para uso. Exigir un resultado observable por capacidad, pruebas representativas y registro de limitaciones antes de certificarla. Conservar la meta de concisión como recomendación.
+**Decisión propuesta:** distinguir propuesta, aprobación de diseño, validación operativa y disponibilidad para uso. Exigir un resultado observable por capacidad, pruebas representativas y registro de limitaciones antes de certificarla.
+
+**Ajuste incorporado el 2026-09-12:** eliminar mínimos, máximos y objetivos de líneas del Scope. Se evalúan cobertura de responsabilidades, claridad, ausencia de contradicciones y duplicaciones, y ubicación adecuada del detalle. Solicitado por el Sr Wolfan; el resto de este ADR sigue propuesto.
+
+**Corrección de criterio:** la cifra de 60 líneas provenía de la anatomía original. No se encontró una justificación documentada. Sam la mantuvo inicialmente como orientación; esta revisión retira también esa recomendación. No se sustituye por otra cifra.
+
+| Alternativa de extensión | Beneficio | Tradeoff |
+| --- | --- | --- |
+| Límite numérico obligatorio | Fácil de contar. | Puede forzar omisiones o compresión y no demuestra calidad. |
+| Cifra orientativa | Permite excepciones. | Mantiene un objetivo sin fundamento que condiciona la redacción. |
+| Criterios de contenido sin cuota — incorporada | Ajusta la extensión al problema y conserva lo necesario. | Requiere revisar redundancia y responsabilidades en vez de contar líneas. |
 
 | Alternativa | Beneficio | Costo o limitación |
 | --- | --- | --- |

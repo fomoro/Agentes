@@ -1,8 +1,8 @@
 # Principios Fundamentales de Arquitectura
 
 - Actualizado: el 2026-09-12
-- Rol de ejecución: Arquitecto Empresarial
-- Autor: Jeff (Asistente IA del Sr Wolfan)
+- Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
+- Autor: Sam (Asistente IA del Sr Wolfan)
 
 Este documento centraliza los axiomas, filosofías y meta-reglas que rigen a toda la Fábrica de Agentes, independientemente de los skills o proyectos específicos.
 
@@ -42,4 +42,4 @@ La IA tiene prohibido buscar esas rutas de forma literal dentro del repositorio 
 Todo archivo de gobernanza base diseñado en esta fábrica debe respetar tres pilares intocables:
 - **Agnóstico:** Escrito en "Prompt Engineering Universal", prohibiendo el acoplamiento a clientes específicos.
 - **Delegador (Router):** El Scope no contiene el paso a paso de las tareas; su responsabilidad es delegar la carga cognitiva hacia los *Skills* modulares.
-- **Elástico:** La topología base (Identidad -> Reglas -> Skills) debe poder soportar desde un script de fin de semana (30 líneas) hasta una arquitectura empresarial (200 líneas) sin romperse.
+- **Elástico:** La topología base (Identidad -> Reglas -> Skills) se adapta a la complejidad real del proyecto sin cuotas de líneas. Conserva las responsabilidades del Scope y remite el detalle especializado a las skills; su calidad se evalúa por cobertura, claridad y ausencia de duplicaciones.

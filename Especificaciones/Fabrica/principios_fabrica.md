@@ -36,13 +36,24 @@ El [banco de reglas](../Gobernanza/banco_reglas_gobernanza.md) contiene las regl
 
 **Principio:** ubicar cada contenido donde se mantiene su responsabilidad y referenciarlo desde los demás documentos.
 
-- Mantener el diseño en Especificaciones, las piezas reutilizables en Capacidades, los antecedentes en Insumos y las evaluaciones en Auditorías, según el [estructura del repositorio](estructura_repositorio.md).
+- Mantener el diseño en Especificaciones, las piezas reutilizables en Capacidades, los antecedentes en Insumos y las evaluaciones en Auditorías, según la [estructura del repositorio](estructura_repositorio.md).
 - Consultar las auditorías existentes como contexto histórico. Mantenerlas intactas durante el trabajo actual y aplicar los cambios autorizados en su fuente vigente, sin exigir un registro adicional en Auditorías.
 - Evitar copias de reglas o estados que puedan evolucionar de manera distinta. Mantener los pendientes en el [backlog](backlog_especificaciones.md) y el avance general en la [hoja de ruta](hoja_de_ruta.md).
 
 **Criterio de revisión:** es posible localizar la regla vigente y distinguirla de sus antecedentes y propuestas.
 
-## 4. Reutilización con límites explícitos
+## 4. Agnosticidad tecnológica
+
+**Principio:** expresar especificaciones, gobernanzas y skills sin depender de un proveedor, modelo, producto, sistema operativo o herramienta particular.
+
+- Definir responsabilidades, reglas, entradas y resultados mediante conceptos aplicables a distintos entornos.
+- Aislar rutas, mecanismos de carga, permisos, comandos e integraciones particulares en la configuración del entorno correspondiente.
+- Usar fuentes externas como evidencia y trazabilidad, sin restringir la aplicación de una regla al ecosistema que la documentó.
+- Identificar y justificar cualquier dependencia inevitable, limitando su alcance al componente que la necesita.
+
+**Criterio de revisión:** el contenido principal puede aplicarse en otro entorno sin reescribir su lógica; solo cambian la configuración, las rutas, los mecanismos de carga o las integraciones particulares.
+
+## 5. Reutilización con límites explícitos
 
 **Principio:** separar el contenido reutilizable de las particularidades de cada proyecto y entorno.
 
@@ -52,7 +63,7 @@ El [banco de reglas](../Gobernanza/banco_reglas_gobernanza.md) contiene las regl
 
 **Criterio de revisión:** se identifica qué se reutiliza, qué debe configurarse y qué queda pendiente de comprobar, sin construir adaptaciones anticipadas para necesidades inexistentes.
 
-## 5. Simplicidad y calidad verificable
+## 6. Simplicidad y calidad verificable
 
 **Principio:** usar la estructura suficiente para cumplir el propósito y comprobar el resultado con un esfuerzo proporcional a su impacto.
 

@@ -8,7 +8,7 @@ Esta carpeta reúne hallazgos, decisiones y propuestas de revisión. Las [especi
 
 | Revisión | Contenido | Estado |
 | --- | --- | --- |
-| [Sam](Sam/README.md) | Diagnóstico, ADR y tradeoffs, diseño candidato, banco de reglas y validación. | Ubicación y eliminación del límite de líneas incorporadas; las demás propuestas siguen en revisión. |
+| [Sam](Sam/README.md) | Diagnóstico, ADR y tradeoffs, diseño candidato, banco de reglas y validación. | Ubicación, eliminación del límite de líneas y cinco nuevas reglas incorporadas; las demás propuestas siguen en revisión. |
 
 ## Organización
 

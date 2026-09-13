@@ -1,11 +1,23 @@
 # Hoja de Ruta: Fábrica de Agentes
 
-- Actualizado: el 2026-09-12
-- Rol de ejecución: Arquitecto Empresarial
-- Autor: Jeff (Asistente IA del Sr Wolfan)
+- Actualizado: el 2026-09-13
+- Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
+- Autor: Sam (Asistente IA del Sr Wolfan)
 
 **Estado Global:** Fase 2 (En Progreso)  
 **Propósito:** Manual secuencial para construir la Fábrica de Agentes desde cero.
+
+**Foco actual: primer entregable, el prototipo del Scope.** La construcción de skills es el segundo entregable y permanece pendiente. Las fases siguientes conservan el plan previo; no se activan por esta reorganización.
+
+| Estado | Trabajo actual |
+| --- | --- |
+| [x] | Organizar Especificaciones por fábrica, gobernanza, Scope y skills. |
+| [x] | Separar los contratos de Scope y skills y aprobar las cuatro responsabilidades del [Scope](../Scope/especificacion_scope.md). |
+| [x] | Delimitar principios transversales, conciliar la estructura real y depurar los vacíos de diseño resueltos. |
+| [x] | Elegir Codex local y definir la [ficha de validación](../Scope/validacion_scope_codex_local.md). |
+| [ ] | Concretar la carpeta destino y registrar versión, revisión y permisos antes de probar. |
+| [ ] | Alinear el [prototipo existente](../../Capacidades/Propuestas/Propuestas_Scope/prototipo_AGENTS_Scope.md) con la especificación actual. |
+| [ ] | Revisar el prototipo contra sus criterios de aceptación y validar su uso en un entorno declarado. |
 
 ---
 
@@ -17,7 +29,7 @@
 | :---: | :--- |
 | [x] | Migrar Gobernanza central a `Capacidades/Base/` |
 | [x] | Renombrar "Backlog" a `Insumos/` aislando código viejo y crudo |
-| [x] | Mapear arquitectura (`plano_arquitectonico.md`) e indexar (`README.md`) |
+| [x] | Mapear arquitectura en el [estructura del repositorio](estructura_repositorio.md) e indexar en el [README](../README.md). |
 
 ---
 
@@ -27,7 +39,7 @@
 
 | Estado | Tarea |
 | :---: | :--- |
-| [x] | Definir la estructura estricta del Scope y del Skill (`especificacion_estructuras.md`) |
+| [x] | Definir y separar la [especificación del Scope](../Scope/especificacion_scope.md) y la [base documental de skills](../Skills/especificacion_skills.md). |
 | [x] | Consolidar el catálogo `banco_reglas_gobernanza.md` con insumos viejos |
 | [x] | Refinar Arquitectura: Separar Principios, Banco de Reglas y Anatomía Estructural |
 | [x] | Diseñar propuestas teóricas de Gobernanza para debatir enfoques (ADR) |

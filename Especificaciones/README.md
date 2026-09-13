@@ -1,37 +1,29 @@
-# Directorio de Especificaciones y Diseño
+# Especificaciones de la Fábrica de Agentes
 
-- Actualizado: el 2026-09-12
+- Actualizado: el 2026-09-13
 - Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
 - Autor: Sam (Asistente IA del Sr Wolfan)
 
-**Propósito de la Carpeta:** Centralizar el diseño arquitectónico (el "Qué" y el "Cómo"). Ningún archivo aquí contiene lógica ejecutable; todos son planos, definiciones y mapas de la Fábrica de Agentes.
+## Trabajo actual: prototipo del Scope
 
----
+La fábrica tiene dos entregables principales: primero el Scope y después las skills. Estamos en el primero. La anatomía está definida; queda alinear y validar el prototipo existente.
 
-## Índice Topológico
+Ruta de lectura:
 
-Para mantener la pureza y el Principio de Responsabilidad Única, las especificaciones están agrupadas en 3 áreas semánticas:
+1. [Principios de la fábrica](Fabrica/principios_fabrica.md): criterios de diseño y trabajo.
+2. [Especificación del Scope](Scope/especificacion_scope.md): contenido, responsabilidades y aceptación.
+3. [Banco de reglas](Gobernanza/banco_reglas_gobernanza.md): seleccionar únicamente lo pertinente al Scope.
+4. [Prototipo existente](../Capacidades/Propuestas/Propuestas_Scope/prototipo_AGENTS_Scope.md): pieza pendiente de alineación con la especificación actual.
 
-### 1. `Arquitectura/` (El "Qué construimos")
-Centraliza las decisiones de alto nivel y el diseño estructural del sistema.
-- [Plano arquitectónico](Arquitectura/plano_arquitectonico_Blueprint.md): mapa de carpetas y responsabilidades.
-- [Banco de reglas](Arquitectura/banco_reglas_gobernanza.md): catálogo de reglas de gobernanza.
+El [fundamento del Scope como enrutador](Scope/fundamento_scope_enrutador.md) es una explicación complementaria del diseño. La [validación en Codex local](Scope/validacion_scope_codex_local.md) define cómo comprobar el prototipo en el primer entorno elegido; todavía no se han ejecutado las pruebas.
 
-### 2. `Estrategia_y_Gobierno/` (El "Cómo trabajamos")
-Centraliza el meta-proceso y la gestión interna de la Fábrica.
-- [Principios de la fábrica](Estrategia_y_Gobierno/principios_fabrica.md): criterios de diseño y trabajo.
-- [Hoja de ruta](Estrategia_y_Gobierno/hoja_de_ruta.md): avance y fases del proyecto.
-- [Backlog](Estrategia_y_Gobierno/backlog_especificaciones.md): ideas, pendientes y reglas en borrador.
+## Organización por propósito
 
-### 3. `Anatomia_y_Plantillas/` (El "Estándar Técnico")
-Centraliza la especificación técnica de bajo nivel para los entregables.
-- [Especificación de estructuras](Anatomia_y_Plantillas/especificacion_estructuras.md): anatomía y aceptación de Scope y skills.
-- [Tesis del patrón Router](Anatomia_y_Plantillas/tesis_patron_router.md): fundamento del Scope como enrutador.
+| Carpeta | Responsabilidad | Documentos |
+| --- | --- | --- |
+| Fabrica | Diseño y gestión de la propia fábrica. | [Principios](Fabrica/principios_fabrica.md), [estructura del repositorio](Fabrica/estructura_repositorio.md), [hoja de ruta](Fabrica/hoja_de_ruta.md) y [backlog](Fabrica/backlog_especificaciones.md). |
+| Gobernanza | Reglas compartidas disponibles para seleccionar. | [Banco de reglas](Gobernanza/banco_reglas_gobernanza.md). |
+| Scope | Primer entregable: contrato del Scope. | [Especificación](Scope/especificacion_scope.md), [fundamento del Scope como enrutador](Scope/fundamento_scope_enrutador.md) y [validación en Codex local](Scope/validacion_scope_codex_local.md). |
+| Skills | Segundo entregable: capacidades especializadas. | [Especificación de skills](Skills/especificacion_skills.md), reservada para la siguiente etapa. |
 
----
-
-## Auditorías y trazabilidad
-
-Las revisiones se alojan en [Auditorías](../Auditorias/README.md), separadas de las especificaciones vigentes. La [auditoría de Sam](../Auditorias/Sam/README.md) contiene diagnóstico, cinco ADR, diseño candidato, revisión del banco y plan de validación.
-
-**Ajustes incorporados:** ubicación de auditorías y eliminación del límite de líneas del Scope, por solicitud del Sr Wolfan. Los demás cambios de arquitectura continúan como propuestas; el registro de incorporación se mantiene en la auditoría.
+Las especificaciones contienen diseño; los prototipos y paquetes se mantienen en Capacidades. Auditorías se conserva como contexto histórico y no requiere actualizaciones durante el trabajo actual. Sus referencias reflejan la organización existente cuando se escribió.

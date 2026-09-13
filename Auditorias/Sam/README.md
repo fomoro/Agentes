@@ -1,10 +1,10 @@
 # Refinamiento de especificaciones — revisión de Sam
 
-- Actualizado: el 2026-09-12
+- Actualizado: el 2026-09-13
 - Rol de ejecución: Arquitecto de Soluciones e Ingeniero de Prompts
 - Autor: Sam (Asistente IA del Sr Wolfan)
 
-**Estado: revisión con ajustes puntuales incorporados.** La ubicación de auditorías y la eliminación del límite de líneas ya se reflejan en las especificaciones por solicitud del Sr Wolfan. Las demás propuestas permanecen en revisión; no se acredita implementación ni certificación operativa.
+**Estado: revisión con ajustes puntuales incorporados.** La ubicación de auditorías, la eliminación del límite de líneas y cinco nuevas reglas del banco ya se reflejan en las especificaciones por solicitud del Sr Wolfan. Las demás propuestas permanecen en revisión; no se acredita implementación ni certificación operativa.
 
 Navegación: [índice de auditorías](../README.md) · [especificaciones vigentes](../../Especificaciones/README.md).
 
@@ -63,4 +63,20 @@ La aprobación del diseño y su implementación son pasos distintos. Esta entreg
 | --- | --- | --- | --- |
 | 2026-09-12 | Auditoría en su ubicación actual, índice propio y enlaces corregidos. | Traslado realizado por el Sr Wolfan y solicitud de reorganización. | Incorporado en índices y blueprint. |
 | 2026-09-12 | Retiro del umbral de 60 líneas, incluso como objetivo orientativo, y de ejemplos numéricos usados para describir elasticidad. | Solicitud del Sr Wolfan; no se identificó una justificación del umbral en las fuentes revisadas. Sam corrige su recomendación anterior. | Incorporado en anatomía, principios y diseño candidato; H08 corregido. |
+| 2026-09-12 | Incorporar cinco reglas: separar contenido de instrucciones, mínimo alcance de intervención, verificar antes de afirmar ejecución, comprobar el estado antes de modificar y preferir acciones recuperables. | Selección explícita del Sr Wolfan sobre las candidatas de co-creación propuestas por Sam; [razones y comprobación](revision_banco_reglas.md#incorporaciones-autorizadas). | Incorporadas en el banco, que pasa de 37 a 42 reglas; validación operativa pendiente. |
 | Pendiente | Resto de los ADR y promoción por evidencia. | Requieren evaluación de sus propias alternativas. | No se infiere aprobación del conjunto a partir de esta reorganización. |
+
+## Refinamiento de los principios
+
+**Incorporado el 2026-09-13 por solicitud de mejora del documento.** Se reorganizaron los [principios de la fábrica](../../Especificaciones/Estrategia_y_Gobierno/principios_fabrica.md) como criterios de diseño y trabajo, con una comprobación por principio.
+
+| Cambio | Por qué | Tradeoff o límite |
+| --- | --- | --- |
+| Co-creación con problema, razón y evidencia. | Evita añadir prácticas por obligación y atribuir garantías a un proveedor sin fuente. | Exige justificar el aporte; también permite concluir que no hace falta cambiar. |
+| Separación explícita entre mantenimiento e instalación cliente. | La expresión anterior de cero ejecución podía confundirse con una prohibición de verificar archivos. | Se conserva la restricción de activación local; desplegar capacidades requiere alcance propio. |
+| Responsabilidades documentales y fuente vigente. | Evita que auditorías y especificaciones compitan como reglas actuales. | Requiere actualizar referencias y registrar las incorporaciones. |
+| Reutilización con dependencias y límites comprobados. | Sustituye la promesa de lenguaje universal por un criterio evaluable. | No resuelve aún los contratos ni adaptadores propuestos en el ADR-03. |
+| Scope como enrutador, con procedimientos en las skills. | Conserva la decisión original y precisa la frontera entre gobernanza y especialización. | No cambia en esta revisión la política de ejecución ni la jerarquía propuesta en otros documentos. |
+| Calidad sin cuotas de líneas y con comprobación proporcional. | Conecta la concisión ya acordada con la utilidad del resultado. | No introduce una certificación operativa ni adopta el ciclo completo del ADR-04. |
+
+Se mantuvieron la naturaleza de biblioteca, la separación de entornos, el patrón enrutador y la eliminación de límites de extensión. No se modificaron el banco de reglas ni las capacidades durante este refinamiento. Los criterios describen decisiones de diseño de Sam para este proyecto, sin nuevas afirmaciones técnicas atribuidas a proveedores.

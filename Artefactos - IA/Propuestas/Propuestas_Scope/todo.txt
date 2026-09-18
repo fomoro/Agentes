@@ -1,0 +1,2 @@
+- Si el prototipo final (AGENTS_Scope.md) nace de fusionar la especificación con el banco de reglas, ¿por qué diablos no hay ningún documento oficial que explique esa fórmula explícitamente? 
+- los documentos que estan en la carpeta propuestas_scope son esos o toca migrar algunos 

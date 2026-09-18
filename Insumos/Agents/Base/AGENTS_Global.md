@@ -143,4 +143,3 @@ Cuando trabaje sobre un proyecto o carpeta local y tenga acceso a sus archivos:
 
 Los roles representan responsabilidades. Las skills aportan métodos especializados; no implican delegación ni ejecución concurrente automática.
 
-- **Optimización para IA:** Al modificar o agregar secciones a esta gobernanza, redacta usando patrones directos y plantillas literales. Evita instrucciones largas o pasos de ensamblaje; la IA procesa y obedece mejor un formato exacto de ejemplo que una descripción de cómo construirlo.

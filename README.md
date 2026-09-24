@@ -1,6 +1,6 @@
 # Estructura base
 
-- Actualizado: el 2026-09-23 23:28
+- Actualizado: el 2026-09-23 23:31
 - Rol de ejecución: arquitecto de información
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -9,19 +9,19 @@ Para consultar los iconos de carpeta disponibles en Material Icon Theme, revisa 
 
 ```text
 C:\Dev\Agentes\
-├── Input\
-├── Generator\
-│   ├── Governance\
-│   │   ├── Factory-Rules\
-│   │   └── Export-Rules\
-│   ├── Scope\
-│   │   ├── Specification\
-│   │   ├── Process\
-│   │   └── Proposal\
-│   └── Backlog.md
-├── Proto\  # Pruebas de concepto
-├── Review\  # Auditorías del proyecto
-└── Export\  # Skills y agentes listos para usar
+├── Input\                              # Fuentes y materiales de entrada
+├── Generator\                          # Diseño y método para crear skills y agentes
+│   ├── Gobernanza\                     # Reglas internas y reglas exportables
+│   │   ├── Reglas_de_la_Fabrica\       # Reglas para operar el generador
+│   │   └── Reglas_Exportables\         # Reglas incluidas en los productos
+│   ├── Scope\                          # Diseño del Scope para proyectos destino
+│   │   ├── Especificaciones\           # Definición del Scope
+│   │   ├── Procesos\                   # Método para crear el Scope
+│   │   └── Propuestas\                 # Borradores del Scope
+│   └── Backlog.md                      # Pendientes de trabajo
+├── Proto\                              # Pruebas de concepto
+├── Review\                             # Auditorías del proyecto
+└── Export\                             # Skills y agentes listos para usar
 ```
 
 ## Extensiones en uso

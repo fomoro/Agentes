@@ -1,6 +1,6 @@
 # Reglas de la fábrica
 
-- Actualizado: el 2026-09-24 20:19
+- Actualizado: el 2026-09-24 21:06
 - Rol de ejecución: arquitectura de gobernanza de agentes y arquitectura de información
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: aprobado
@@ -46,7 +46,7 @@ Establecer las reglas con las que Generator diseña, revisa y prepara agentes, s
 | :--- | :--- | :--- |
 | **Estado explícito** | Distinguir propuesta, decisión confirmada, prototipo y capacidad validada. No inferir aprobación del diseño completo a partir de un cambio documental o una prueba parcial. | Propuesta del agente IA |
 | **Pendientes concretos** | Mantener los vacíos y decisiones sin resolver en el backlog o registro acordado; no rellenarlos con supuestos en una regla exportable. | Propuesta del agente IA |
-| **Borradores y evidencias** | Reservar Propuestas para borradores concretos y guardar los resultados de pruebas en la ubicación acordada para evidencias, separados de los métodos reutilizables. | Propuesta del agente IA |
+| **Borradores y evidencias** | Guardar los borradores concretos en `Proto/Global`, `Proto/Local` o `Proto/Skills`, según la capacidad; guardar los resultados de pruebas en la ubicación acordada para evidencias, separados de los métodos reutilizables. | Propuesta del agente IA |
 
 ## 5. Validación y promoción de resultados
 

@@ -1,6 +1,6 @@
 # Proceso de creación de un Scope
 
-- Actualizado: el 2026-09-24 20:19
+- Actualizado: el 2026-09-24 21:06
 - Rol de ejecución: diseño de procesos, arquitectura de gobernanza y revisión documental
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -11,7 +11,7 @@ Establecer cómo recopilar el contexto y la gobernanza efectiva de un proyecto d
 
 ## Alcance
 
-La elaboración termina con un borrador en [Propuestas](../Propuestas/) y un resultado de revisión explícito. Cuando se solicite comprobar su comportamiento, aplicar el [proceso de validación](proceso_validacion_scope.md) sobre una revisión identificada. La elaboración no instala el Scope ni construye skills.
+La elaboración termina con un borrador en [Proto/Local](../../../../Proto/Local/) y un resultado de revisión explícito. Cuando se solicite comprobar su comportamiento, aplicar el [proceso de validación](proceso_validacion_scope.md) sobre una revisión identificada. La elaboración no instala el Scope ni construye skills.
 
 Las [reglas de la fábrica](../../../.rules/Reglas_Operacion.md) gobiernan su construcción y mantenimiento documental.
 
@@ -36,7 +36,7 @@ Si un insumo requerido no está disponible, registrar el vacío. No sustituirlo 
 5. **Asignar el contenido.** Preparar las cuatro secciones definidas en la especificación: contexto y alcance del proyecto; reglas y límites de actuación; selección y uso de skills; cambios de gobernanza. Seleccionar del catálogo las reglas compatibles y pertinentes, ubicarlas en su nivel y remitir a las fuentes vigentes en vez de copiarlas.
 6. **Redactar el borrador.** Usar instrucciones concretas y aplicables al proyecto. Distinguir preferencias de requisitos, incluir condiciones y excepciones necesarias y no afirmar como universales las rutas, permisos, mecanismos de carga o capacidades de un entorno.
 7. **Revisar el borrador.** Aplicar el cierre y verificación de este proceso. Asociar el resultado a una revisión exacta mediante un identificador o huella de contenido.
-8. **Entregar para revisión.** Guardar el borrador en la ubicación acordada dentro de [Propuestas](../Propuestas/), identificar el proyecto destino y marcarlo como propuesta. Comprobar que el archivo entregado corresponde a la revisión evaluada.
+8. **Entregar para revisión.** Guardar el borrador en la ubicación acordada dentro de [Proto/Local](../../../../Proto/Local/), identificar el proyecto destino y marcarlo como propuesta. Comprobar que el archivo entregado corresponde a la revisión evaluada.
 
 ## Resultado de la elaboración
 

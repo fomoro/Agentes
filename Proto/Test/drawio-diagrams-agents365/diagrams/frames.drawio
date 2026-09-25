@@ -1,0 +1,75 @@
+<mxfile host="65bd71144e" pages="2">
+    <diagram id="w4MSmI4LduM1fRppP9v0" name="diseño">
+        <mxGraphModel dx="6478" dy="84" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <lx-settings mappingTemplate="78910c89-7719-4844-862e-d06c07ca55b2" id="0">
+                    <mxCell style=""/>
+                </lx-settings>
+                <mxCell id="1" style="" parent="0"/>
+                <mxCell id="519" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="280" y="1017"/>
+                            <mxPoint x="280" y="810"/>
+                            <mxPoint x="980" y="810"/>
+                            <mxPoint x="980" y="918"/>
+                        </Array>
+                        <mxPoint x="350" y="1016.5555555555557" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <object type="factSheet" label="FloNetworks DCI" factSheetType="ITComponent" factSheetId="e86ebe85-1204-4cba-bf87-ad7721e82599" id="3019">
+                    <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#000000;" parent="1" edge="1">
+                        <mxGeometry relative="1" as="geometry">
+                            <mxPoint x="6522" y="1531.5" as="sourcePoint"/>
+                        </mxGeometry>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="Oracle Nube" factSheetType="ITComponent" factSheetId="f59bf785-f9dc-46d7-9871-e614e59afc53" id="wc8-8MmnJTlGPzKeZtWV-3019">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;swimlaneFillColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4755" y="1520" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="SAP Nube" factSheetType="ITComponent" factSheetId="3527670d-a738-4c9a-9fda-9bb1a3382379" id="wc8-8MmnJTlGPzKeZtWV-3020">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#dae8fc;gradientColor=#7ea6e0;strokeColor=#6c8ebf;swimlaneFillColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4537" y="1522" width="200" height="78" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="GCP Nube" factSheetType="ITComponent" factSheetId="5d299066-8dda-4c92-b617-b877405a1501" id="wc8-8MmnJTlGPzKeZtWV-3021">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=130;height=20;fillColor=#f8cecc;strokeColor=#b85450;swimlaneFillColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4755" y="1810" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="Salesforce Nube" factSheetType="ITComponent" factSheetId="b26cfe0a-f6e8-429b-8201-89a93c7eb8c5" id="wc8-8MmnJTlGPzKeZtWV-3022">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#0050ef;strokeColor=#001DBC;swimlaneFillColor=none;fontColor=#ffffff;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4537" y="1710" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object label="Microsoft 365" type="factSheet" factSheetType="ITComponent" factSheetId="3a9dba41-8235-443a-9ca7-b51b23f040d7" id="wc8-8MmnJTlGPzKeZtWV-3023">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#b1ddf0;strokeColor=#10739e;swimlaneFillColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4755" y="1710" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="OnPremise" factSheetType="ITComponent" factSheetId="ba5ddd46-c051-4f9b-82c4-4df9c469b6e8" id="wc8-8MmnJTlGPzKeZtWV-3024">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=none;gradientColor=#b3b3b3;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4760" y="1420" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="Microsoft Azure Nube" factSheetType="ITComponent" factSheetId="0bbc9c75-29f6-4be3-9a93-850bd96806f9" id="wc8-8MmnJTlGPzKeZtWV-3025">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#1ba1e2;strokeColor=#006EAF;swimlaneFillColor=none;fontColor=#ffffff;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4542" y="1420" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="AWS Nube" factSheetType="ITComponent" factSheetId="9a1c136f-5299-4e81-a2cc-2d0a08c7d62b" id="wc8-8MmnJTlGPzKeZtWV-3026">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#ffcd28;gradientColor=#ffa500;strokeColor=#d79b00;swimlaneFillColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4537" y="1610" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+                <object type="factSheet" label="Privado Nube" factSheetType="ITComponent" factSheetId="3c5b0fc7-52c5-42e8-b5a5-9383b37b86f9" id="wc8-8MmnJTlGPzKeZtWV-3027">
+                    <mxCell style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=20;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=none;gradientColor=#97d077;rounded=0;shadow=1;" vertex="1" parent="1">
+                        <mxGeometry x="-4755" y="1610" width="200" height="80" as="geometry"/>
+                    </mxCell>
+                </object>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

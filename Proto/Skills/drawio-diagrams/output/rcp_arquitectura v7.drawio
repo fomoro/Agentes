@@ -1,0 +1,237 @@
+<mxfile version="21.6.8">
+  <diagram id="rcp_colcomercio_v7" name="Arquitectura RCP (V7 Prompt 06)">
+    <mxGraphModel dx="2400" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== ZONAS ==================== -->
+        
+        <!-- Zona 1: Actores -->
+        <mxCell id="z_actores" value="Actores" style="swimlane;startSize=30;fontStyle=1;align=center;fillColor=#D5E8D4;gradientColor=#97D077;gradientDirection=south;fontSize=14;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="u_interno" value="Usuario Interno" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Helvetica Neue;" vertex="1" parent="z_actores">
+          <mxGeometry x="55" y="300" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="u_externo" value="Usuario Externo" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Helvetica Neue;" vertex="1" parent="z_actores">
+          <mxGeometry x="55" y="550" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Zona 2: Accesos -->
+        <mxCell id="z_accesos" value="Accesos" style="swimlane;startSize=30;fontStyle=1;align=center;fillColor=#647687;gradientColor=#40515F;gradientDirection=south;fontSize=14;fontColor=#FFFFFF;shadow=1;fontFamily=Helvetica Neue;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="150" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="e_browser" value="Browser" style="shape=image;aspect=fixed;html=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;image=img/lib/azure2/general/Browser.svg;fontFamily=Helvetica Neue;" vertex="1" parent="z_accesos">
+          <mxGeometry x="42" y="440" width="65" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="u_interno" target="e_browser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_ue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="u_externo" target="e_browser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Zona 3: Aplicaciones 1 -->
+        <mxCell id="z_app1" value="Aplicaciones" style="swimlane;startSize=30;fontStyle=1;align=center;fillColor=#D5E8D4;gradientColor=#97D077;gradientDirection=south;fontSize=14;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="580" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="f_privado1" value="Privado Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#D5E8D4;gradientColor=#97D077;gradientDirection=south;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_app1">
+          <mxGeometry x="50" y="50" width="480" height="950" as="geometry" />
+        </mxCell>
+        <mxCell id="c_rcp" value="RCP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;verticalAlign=top;container=1;fontFamily=Helvetica Neue;fontSize=11;fontStyle=1;" vertex="1" parent="f_privado1">
+          <mxGeometry x="50" y="50" width="380" height="850" as="geometry" />
+        </mxCell>
+        
+        <!-- Elementos RCP (Nombres según Prompt 06) -->
+        <mxCell id="rcp_1" value="Recepción y sincronización de SKUs desde PeopleSoft" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="40" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_2" value="Consulta y selección de SKU por Facility" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="90" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_3" value="Gestión de atributos logísticos del producto" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="140" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_4" value="Parametrización de producto por depósito / Facility" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="190" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_5" value="Configuración de unidades de medida y dimensiones" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="240" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_6" value="Gestión de catálogos y listas desplegables" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="290" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_7" value="Gestión de SKU Modula" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="340" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_8" value="Gestión de producto irregular y producto anidado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="390" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_9" value="Gestión de tracking de fechas y seriales" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="440" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_10" value="Gestión de SIOC, multiproducto e imagen del SKU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="490" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_11" value="Replicación de configuración entre Facilities" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="540" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_12" value="Envío de configuración hacia Manhattan, PeopleSoft, PTL y Modula" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="590" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_13" value="Administración de usuarios, roles y permisos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="640" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_14" value="Auditoría, logs y trazabilidad" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="690" width="280" height="40" as="geometry" /></mxCell>
+        <mxCell id="rcp_15" value="Reportes operativos de parametrización" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="c_rcp"><mxGeometry x="50" y="740" width="280" height="40" as="geometry" /></mxCell>
+
+        <mxCell id="edge_browser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="e_browser" target="c_rcp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Zona 4: Integración -->
+        <mxCell id="z_int" value="Integración" style="swimlane;startSize=30;fontStyle=1;align=center;fillColor=#60A917;gradientColor=#3B770D;gradientDirection=south;fontSize=14;fontColor=#FFFFFF;shadow=1;fontFamily=Helvetica Neue;" vertex="1" parent="1">
+          <mxGeometry x="990" y="20" width="650" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="f_aws1" value="AWS Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#FFCD28;gradientColor=#FFA500;gradientDirection=south;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_int">
+          <mxGeometry x="50" y="50" width="550" height="950" as="geometry" />
+        </mxCell>
+        <mxCell id="c_mule" value="MuleSoft" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;verticalAlign=top;container=1;fontFamily=Helvetica Neue;fontSize=11;fontStyle=1;" vertex="1" parent="f_aws1">
+          <mxGeometry x="50" y="50" width="450" height="850" as="geometry" />
+        </mxCell>
+        
+        <!-- Elemento Pendiente Origen Desconocido -->
+        <mxCell id="e_pendiente_origen" value="Pendiente: Origen sin identificar" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF2CC;strokeColor=#D6B656;fontFamily=Helvetica Neue;fontSize=11;align=center;" vertex="1" parent="c_mule">
+          <mxGeometry x="30" y="40" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- APIs (Nombres Normalizados MuleSoftAPI.kebab-case) -->
+        <mxCell id="api_1" value="MuleSoftAPI.publicar-productos-unidad-negocio V1" style="ellipse;shapeInside=1;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Helvetica Neue;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;" vertex="1" parent="c_mule">
+          <mxGeometry x="200" y="150" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_2" value="MuleSoftAPI.consultar-imagen-producto" style="ellipse;shapeInside=1;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Helvetica Neue;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;" vertex="1" parent="c_mule">
+          <mxGeometry x="200" y="400" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_3" value="MuleSoftAPI.informacion-producto" style="ellipse;shapeInside=1;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Helvetica Neue;fontSize=11;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;" vertex="1" parent="c_mule">
+          <mxGeometry x="200" y="650" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones Pendiente -> API 1 -->
+        <mxCell id="edge_pend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="e_pendiente_origen" target="api_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Conexiones RCP -> APIs -->
+        <mxCell id="edge_rcp1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_rcp" target="api_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_rcp2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_rcp" target="api_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_rcp3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_rcp" target="api_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Zona 5: Aplicaciones 2 -->
+        <mxCell id="z_app2" value="Aplicaciones" style="swimlane;startSize=30;fontStyle=1;align=center;fillColor=#D5E8D4;gradientColor=#97D077;gradientDirection=south;fontSize=14;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="20" width="400" height="1030" as="geometry" />
+        </mxCell>
+
+        <!-- Frame GCP -->
+        <mxCell id="f_gcp" value="GCP Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#F8CECC;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_app2">
+          <mxGeometry x="50" y="50" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="e_manhattan" value="Manhattan Active Warehouse Management" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_gcp">
+          <mxGeometry x="50" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_man" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_manhattan"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <!-- Frame Oracle (SIN CONEXION ENTRANTE, SEGUN XML ORIGINAL) -->
+        <mxCell id="f_oracle" value="Oracle Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#F8CECC;gradientColor=#EA6B66;gradientDirection=south;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_app2">
+          <mxGeometry x="50" y="210" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="e_peoplesoft" value="PeopleSoft" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_oracle">
+          <mxGeometry x="50" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+        <!-- No añado puerto a PeopleSoft porque no recibe flujo, se mantiene aislado según requerimiento -->
+
+        <!-- Frame Privado Nube -->
+        <mxCell id="f_privado2" value="Privado Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#D5E8D4;gradientColor=#97D077;gradientDirection=south;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_app2">
+          <mxGeometry x="50" y="370" width="300" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tms" value="TMS Unigis" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_privado2">
+          <mxGeometry x="50" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_tms" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_tms"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+        
+        <mxCell id="e_sirv" value="Sirv" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_privado2">
+          <mxGeometry x="50" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_sirv" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_sirv"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+        
+        <mxCell id="e_sap" value="SAP Comerce Cloud" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_privado2">
+          <mxGeometry x="50" y="170" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_sap" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_sap"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <!-- Frame AWS Nube -->
+        <mxCell id="f_aws2" value="AWS Nube" style="shape=umlFrame;width=120;whiteSpace=wrap;rounded=0;container=1;fontStyle=1;html=1;fillColor=#FFCD28;gradientColor=#FFA500;gradientDirection=south;fontColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=12;" vertex="1" parent="z_app2">
+          <mxGeometry x="50" y="650" width="300" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="e_shopify" value="Shopify" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_aws2">
+          <mxGeometry x="50" y="50" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_shop" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_shopify"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="e_vtex" value="Vtex Marketplace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_aws2">
+          <mxGeometry x="50" y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_vtex" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_vtex"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="e_corbeapp" value="CorbeApp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_aws2">
+          <mxGeometry x="50" y="170" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_capp" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_corbeapp"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <mxCell id="e_corbemovil" value="CorbeMóvil" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;shadow=1;fontFamily=Helvetica Neue;fontSize=11;" vertex="1" parent="f_aws2">
+          <mxGeometry x="50" y="230" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cmov" value="" style="shape=providedRequiredInterface;direction=west;aspect=fixed;html=1;fillColor=#90BD99;strokeColor=#56735E;" vertex="1" parent="e_corbemovil"><mxGeometry x="-10" y="10" width="20" height="20" as="geometry" /></mxCell>
+
+        <!-- Conexiones Ortogonales con Waypoints -->
+        <!-- API 1 -> Manhattan, TMS -->
+        <mxCell id="edge_a1_man" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_1" target="p_man">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="245" />
+              <mxPoint x="1600" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_a1_tms" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_1" target="p_tms">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="245" />
+              <mxPoint x="1600" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- API 2 -> Sirv -->
+        <mxCell id="edge_a2_sirv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_2" target="p_sirv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="495" />
+              <mxPoint x="1600" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- API 3 -> SAP, Shopify, Vtex, CorbeApp, CorbeMovil -->
+        <!-- Uso x=1620 y x=1640 para no superponer con el carril x=1600 de la API 1 y API 2 -->
+        <mxCell id="edge_a3_sap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_3" target="p_sap">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1620" y="745" /><mxPoint x="1620" y="580" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_a3_shop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_3" target="p_shop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1640" y="745" /><mxPoint x="1640" y="740" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_a3_vtex" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_3" target="p_vtex">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1640" y="745" /><mxPoint x="1640" y="800" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_a3_capp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_3" target="p_capp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1640" y="745" /><mxPoint x="1640" y="860" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_a3_cmov" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="api_3" target="p_cmov">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1640" y="745" /><mxPoint x="1640" y="920" /></Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

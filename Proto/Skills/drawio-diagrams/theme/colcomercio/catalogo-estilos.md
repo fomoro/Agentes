@@ -1,6 +1,6 @@
 # Catálogo de estilos — Colcomercio
 
-- Actualizado: el 2026-09-25 01:08
+- Actualizado: el 2026-09-25 01:38
 - Rol de ejecución: diseño visual y arquitectura de skills
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -50,14 +50,14 @@ Ambos usan rectángulo de esquinas rectas, fondo blanco, borde negro, sombra y t
 
 ## Elementos
 
-Las formas siguientes son convenciones visuales, no una lista de elementos obligatorios. Mostrar la etiqueta debajo del ícono, salvo Paso, Caché, Syncout en integración y Paginación, que la llevan dentro. En API de integración, usar el interior solo si el nombre cabe completo; de lo contrario, situarlo debajo o a un lado. Mantener la proporción del ícono al dimensionarlo. Si una clave heredada no está disponible en el motor, buscar una forma equivalente antes de sustituirla; no dejar cuadros vacíos.
+Las formas siguientes son convenciones visuales, no una lista de elementos obligatorios. Mostrar la etiqueta debajo del ícono, salvo Paso, Caché, Syncout en integración y Paginación, que la llevan dentro. En API de integración, usar el interior solo si el nombre cabe completo; de lo contrario, situarlo debajo o a un lado con `whiteSpace=wrap` y `labelWidth` ajustado al espacio disponible. Mantener la proporción del ícono al dimensionarlo. Si una clave heredada no está disponible en el motor, buscar una forma equivalente antes de sustituirla; no dejar cuadros vacíos.
 
 ### Compartidos
 
 | Elemento | Forma |
 | :--- | :--- |
 | API | `ellipse; shapeInside=1`; en solución, etiqueta debajo. |
-| Interfaz provista/requerida (UML) | `shape=providedRequiredInterface`; no usar como símbolo de cualquier puerto circular. |
+| Interfaz provista/requerida (UML) | `shape=providedRequiredInterface`; en el borde izquierdo con conexión entrante desde la izquierda, `flipH=1` orienta la curvatura hacia la conexión. No usar como símbolo de cualquier puerto circular. |
 | Pivote | `shape=isoCube2`. |
 | Paso | `ellipse`; número secuencial dentro. |
 

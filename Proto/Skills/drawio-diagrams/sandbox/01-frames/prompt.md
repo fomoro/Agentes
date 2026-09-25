@@ -1,0 +1,1 @@
+quiero que me generes en un draw todos los diferente tipos de frames que tenemos 

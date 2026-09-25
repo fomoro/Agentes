@@ -1,0 +1,1 @@
+Genera un diagrama que ilustre los 9 tipos de frames (OnPremise y Nubes) definidos en el catálogo de Colcomercio. Dentro de cada frame, incluye un componente simple y conéctalos todos secuencialmente formando un flujo en "S", usando pines exactos de entrada y salida para evitar que las flechas se crucen o se superpongan.

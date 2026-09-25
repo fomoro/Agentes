@@ -36,17 +36,17 @@ Ambos usan rectángulo de esquinas rectas, fondo blanco, borde negro, sombra y t
 
 ## Frames
 
-| Frame | Fondo | Degradado | Texto |
-| :--- | :--- | :--- | :--- |
-| OnPremise | `#F5F5F5` | — | Negro |
-| SAP Nube | `#DAE8FC` | `#7EA6E0` | Negro |
-| Oracle Nube | `#F8CECC` | `#EA6B66` | Negro |
-| Privado Nube | `#D5E8D4` | `#97D077` | Negro |
-| AWS Nube | `#FFCD28` | `#FFA500` | Negro |
-| Microsoft 365 | `#B1DDF0` | — | Negro |
-| Salesforce Nube | `#0050EF` | — | Blanco |
-| GCP Nube | `#F8CECC` | — | Negro |
-| Microsoft Azure Nube | `#1BA1E2` | — | Blanco |
+| Frame | Fondo | Degradado | Borde | Texto |
+| :--- | :--- | :--- | :--- | :--- |
+| OnPremise | `#F5F5F5` | — | `#666666` | Negro |
+| SAP Nube | `#DAE8FC` | `#7EA6E0` | `#6C8EBF` | Negro |
+| Oracle Nube | `#F8CECC` | `#EA6B66` | `#B85450` | Negro |
+| Privado Nube | `#D5E8D4` | `#97D077` | `#82B366` | Negro |
+| AWS Nube | `#FFCD28` | `#FFA500` | `#D79B00` | Negro |
+| Microsoft 365 | `#B1DDF0` | — | `#10739E` | Negro |
+| Salesforce Nube | `#0050EF` | — | `#001DBC` | Blanco |
+| GCP Nube | `#F8CECC` | — | `#B85450` | Negro |
+| Microsoft Azure Nube | `#1BA1E2` | — | `#006EAF` | Blanco |
 
 ## Elementos
 

@@ -1,36 +1,40 @@
-# Guía de construcción — Colcomercio
+# Guía de construcción — Colcomercio (V3)
 
-- Actualizado: el 2026-09-25 02:09
-- Rol de ejecución: diseño de procesos de diagramación y arquitectura de skills
-- Autor: Sam (Asistente IA del Sr. Wolfan)
-- Estado: propuesta en revisión
+- Actualizado: el 2026-09-25 17:02
+- Rol de ejecución: arquitectura de soluciones y diseño de skills
+- Autor: Sam (asistenta IA del Sr. Wolfan)
+- Estado: propuesta para revisión
 
 ## Objetivo
 
-Construir un diagrama de solución o integración que responda una pregunta concreta y represente solo información confirmada. Esta guía decide qué mostrar y cómo relacionarlo; el [catálogo de estilos](catalogo-estilos.md) define su apariencia y el [inventario de aplicaciones](inventario-aplicaciones.md) aporta ubicaciones candidatas con su estado. Ninguna posición visual demuestra una conexión de red.
+Definir qué representar y cómo comprobar un diagrama de solución o integración de Colcomercio. El [catálogo de estilos](catalogo-estilos.md) define la apariencia; [SKILL.md](../../SKILL.md) define las herramientas, la generación y la entrega.
 
-## Construcción
+## Representación
 
-1. **Delimitar.** Identificar objetivo, alcance, nivel (solución, integración o ambos), fuentes y datos pendientes. Aceptar una descripción libre o una ficha existente; no exigir ni crear una ficha aparte para poder diagramar. Si falta información indispensable para una parte, dejarla pendiente y avanzar solo en las partes independientes.
-2. **Seleccionar la estructura.** Incluir únicamente elementos y relaciones necesarios. Usar zonas cuando muestren una responsabilidad o frontera; frames cuando proveedor, entorno o red sean relevantes; y componentes contenedores para sistemas cuyo detalle interno aporte al objetivo. La jerarquía `zona → frame → componente → elemento` admite niveles omitidos: no forzar capas ni alojamientos no confirmados. Consultar el inventario y corroborar su ubicación candidata antes de situar una aplicación en un frame; si no se confirma, dejarla sin ubicación.
-3. **Representar los elementos.** Si las fuentes detallan interfaces o capacidades internas pertinentes, mostrarlas dentro del sistema y conectar individualmente las relaciones confirmadas; en otro caso, conservar el sistema como caja única. Cada ícono debe corresponder a una responsabilidad o hecho confirmado. Aplicar el catálogo visual y ajustar el tamaño al contenido. Usar pasos numerados solo si existe una secuencia.
-4. **Trazar relaciones y pendientes.** Conservar origen, destino y sentido funcional. Diferenciar conexiones síncronas y asíncronas solo cuando su tipo esté confirmado. No dibujar componentes ni conexiones no confirmados como si existieran. Si una brecha debe verse en el diagrama, marcarla con una Nota «Pendiente» unida mediante una línea punteada al elemento o relación confirmada que afecta; no inventar el extremo ausente. Mostrar etiquetas funcionales solo si aportan información confirmada.
-5. **Ordenar y generar.** Elegir la orientación que haga legible la historia; de izquierda a derecha suele servir, pero no fija el orden de las zonas. Repetir una zona únicamente si el flujo vuelve a ella y mejora la secuencia. Dejar al menos 30 px entre cada zona y su frame. En frames y componentes contenedores, medir el contenido visible de cada hijo —figura y etiqueta externa como un conjunto— y dejar 50 px entre ese conjunto y cada borde lateral, sin sumar otros 50 px alrededor de la figura. Ajustar el ancho de las etiquetas externas al texto y al espacio disponible antes de ampliar el contenedor. Dejar 30 px bajo el último hijo y reservar arriba el espacio del título. Dimensionar y recolocar el contenedor y sus vecinos para conservar esos márgenes sin solapamientos. Situar las API expuestas sobre la frontera del sistema y orientar su etiqueta hacia el interior o un lateral libre cuando las flechas puedan taparla. Dejar espacio adicional entre contenedores para etiquetas y conexiones. Para varias arquitecturas o alternativas solicitadas, usar una página por arquitectura dentro del mismo `.drawio`.
+- Ajustar el detalle a la pregunta del diagrama. Usar zonas para responsabilidades o fronteras, frames para entornos confirmados y componentes contenedores cuando su detalle interno aporte. Omitir niveles innecesarios.
+- Mostrar elementos y relaciones respaldados por las fuentes. Distinguir propuestas de hechos confirmados y marcar como «Pendiente» los datos sin resolver. No completar ubicaciones ni conexiones por apariencia o conveniencia visual.
+- Consultar el [inventario de aplicaciones](inventario-aplicaciones.md) cuando se necesite ubicar sistemas; corroborar sus ubicaciones candidatas antes de representarlas como confirmadas.
+- Mostrar interfaces internas cuando sean pertinentes al alcance y conectar cada relación con su extremo correspondiente. Conservar origen, destino y sentido funcional; numerar pasos solo cuando exista una secuencia.
+- Aplicar la distinción visual entre conexiones síncronas y asíncronas del catálogo únicamente cuando ese comportamiento esté respaldado.
 
 ## Nombres de API
 
-- Con sistema identificado: `SistemaPascalCase.operacion-en-kebab-case`. Antes del punto va PascalCase; después, kebab-case.
-- Sin sistema identificado: `operacion-en-kebab-case`. Por ejemplo, `publicarProductoUnidadNegocio V1` se representa como `publicar-producto-unidad-negocio V1`.
-- Si hay versión, conservar su grafía tras un espacio. No inventar el sistema ni truncar el nombre con puntos suspensivos.
+- Con sistema identificado: `SistemaPascalCase.operacion-en-kebab-case`.
+- Sin sistema identificado: `operacion-en-kebab-case`; no inventar el prefijo.
+- Conservar la grafía de la versión tras un espacio: `publicar-producto-unidad-negocio V1`. Mostrar el nombre completo, sin puntos suspensivos.
 
-## Rutas y puertos
+## Disposición y legibilidad
 
-- En relaciones uno-a-muchos y entre API distintas, ordenar los destinos, conectar por lados enfrentados y distribuir anclajes y corredores para separar las rutas. No superponer tramos ni fijar todas las flechas al mismo punto. Usar un punto de unión solo si no sugiere una conexión compartida no confirmada; si un cruce es inevitable, distinguirlo con un salto de línea. Comprobar visualmente cada ruta completa, de origen a destino.
-- Si la fuente solicita una interfaz sobre el borde, escoger el símbolo y su orientación según el catálogo. Para centrar un puerto de ancho `w` y alto `h` en el borde izquierdo, hacerlo hijo directo de la caja y situarlo en `x=-w/2`, `y=y_conexión-h/2`, con `y_conexión` medido desde la parte superior de la caja. Conectar la flecha al puerto y revisar que se vea, apunte hacia la conexión y acompañe a la caja al moverla. El margen interior de 50 px no aplica al puerto montado sobre el borde.
+Usar el autolayout cuando la estructura lo permita. El motor calcula posiciones y recorridos a partir de dimensiones y parámetros suministrados; no asumir que mide etiquetas externas, ajusta texto o aplica los márgenes del perfil automáticamente. Comprobar esas condiciones también cuando el catálogo atribuya el dimensionamiento al motor.
+
+- Reservar al menos 30 px entre la zona y sus frames. En frames y componentes contenedores, dejar 50 px laterales desde el conjunto visible de figura y etiqueta, 30 px bajo el último hijo y espacio superior para el título.
+- Ajustar el ancho de las etiquetas antes de ampliar contenedores. Contar cada margen una sola vez; mantener nombres legibles y proporciones de los íconos.
+- Situar las API expuestas sobre la frontera del sistema. Cuando corresponda un símbolo de interfaz, aplicar su orientación según el catálogo; el margen interior no desplaza los puertos montados sobre el borde.
+- Separar anclajes y recorridos de conexiones diferentes. Evitar líneas sobre etiquetas o elementos ajenos; distinguir los cruces inevitables de las uniones reales. No añadir nodos de arquitectura para acomodar flechas.
 
 ## Conectividad física
 
-Las relaciones con actores o dispositivos de acceso muestran solo la interacción funcional. Para una relación entre aplicaciones o plataformas, añadir tramos físicos únicamente si están confirmados los entornos de ambos extremos y la ruta efectiva. Las correspondencias heredadas siguientes sirven como referencia del perfil, no como prueba de que la red actual las use:
+Las relaciones con actores o dispositivos de acceso muestran la interacción funcional. Entre aplicaciones o plataformas, incorporar tramos físicos solo cuando estén confirmados ambos entornos y la ruta efectiva. Esta tabla conserva referencias del perfil; no acredita por sí sola la red utilizada.
 
 | Extremos | Tramos de referencia |
 | :--- | :--- |
@@ -42,13 +46,13 @@ Las relaciones con actores o dispositivos de acceso muestran solo la interacció
 | Oracle Nube ↔ AWS Nube | Oracle FastConnect → Pivote → FloNetworks DCI |
 | Oracle Nube ↔ OnPremise | Oracle FastConnect |
 
-Preferir la fila que nombre ambas plataformas frente a una genérica. Al representar la ruta en sentido inverso, invertir los tramos, pero conservar el sentido funcional de la flecha. Usar Pivote solo en las filas que lo incluyen. Si faltan datos, la ruta real difiere, no coincide ninguna fila o hay dos correspondencias igualmente específicas, no inventar tramos: dejar la conectividad física pendiente.
+- Preferir la correspondencia que identifique ambas plataformas frente a una genérica. Si la ruta real difiere o hay ambigüedad, representar únicamente lo confirmado y marcar lo restante como pendiente.
+- Al invertir el recorrido, invertir los tramos físicos y conservar el sentido funcional de la relación.
+- Usar Pivote únicamente cuando represente una demarcación física confirmada de la ruta; no como recurso de distribución visual.
 
-«Pivote» representa una demarcación física confirmada, no un recurso para ordenar flechas; para esto último, usar puntos de conexión o quiebres sin añadir nodos semánticos.
+## Comprobación del resultado
 
-## Revisión del resultado
-
-- El objetivo y el flujo principal se entienden sin elementos decorativos.
-- Cada elemento, relación, ubicación y tramo representado tiene respaldo en el encargo o en una fuente vigente.
-- No hay etiquetas ilegibles, solapamientos ni líneas que atraviesen elementos; el archivo `.drawio` sigue editable.
-- Los pendientes no aparecen como decisiones confirmadas. La ruta de entrega se resuelve según `SKILL.md` y la gobernanza del proyecto destino.
+- El flujo responde al objetivo y conserva las relaciones, direcciones y estados de las fuentes.
+- Las ubicaciones y rutas físicas tienen respaldo; los pendientes se distinguen de lo confirmado.
+- Los estilos corresponden al catálogo; títulos, etiquetas y puertos permanecen legibles, sin desbordamientos ni solapamientos.
+- Los márgenes y recorridos cumplen esta guía en el resultado generado. La validación del XML y el uso de autolayout no acreditan por sí solos fidelidad visual o semántica.

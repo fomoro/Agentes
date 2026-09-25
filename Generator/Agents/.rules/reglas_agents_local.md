@@ -1,6 +1,6 @@
-# Reglas para .agents/AGENTS_Scope.md
+# Reglas de gobernanza local
 
-- Actualizado: el 2026-09-24 01:55
+- Actualizado: el 2026-09-24 20:19
 - Rol de ejecución: arquitectura de gobernanza y mantenimiento documental
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: aprobado

@@ -1,30 +1,33 @@
-# Estructura base
+# Fábrica de Agentes Locales
 
-- Actualizado: el 2026-09-23 23:31
-- Rol de ejecución: arquitecto de información
-- Autor: Sam (Asistente IA del Sr. Wolfan)
-- Estado: propuesta en revisión
+> **Actualizado:** 2026-09-24
+> **Rol de ejecución:** Arquitecto de información
+> **Autor:** Jeff (Asistente IA del Sr. Wolfan)
 
-Para consultar los iconos de carpeta disponibles en Material Icon Theme, revisa su [galería](https://github.com/material-extensions/vscode-material-icon-theme/blob/main/README.md).
+## 1. Objetivo
 
-```text
-C:\Dev\Agentes\
-├── Input\                              # Fuentes y materiales de entrada
-├── Generator\                          # Diseño y método para crear skills y agentes
-│   ├── Gobernanza\                     # Reglas internas y reglas exportables
-│   │   ├── Reglas_de_la_Fabrica\       # Reglas para operar el generador
-│   │   └── Reglas_Exportables\         # Reglas incluidas en los productos
-│   ├── Scope\                          # Diseño del Scope para proyectos destino
-│   │   ├── Especificaciones\           # Definición del Scope
-│   │   ├── Procesos\                   # Método para crear el Scope
-│   │   └── Propuestas\                 # Borradores del Scope
-│   └── Backlog.md                      # Pendientes de trabajo
-├── Proto\                              # Pruebas de concepto
-├── Review\                             # Auditorías del proyecto
-└── Export\                             # Skills y agentes listos para usar
-```
+Entorno para estructurar, estandarizar y empaquetar enrutadores inteligentes (`AGENTS_Scope.md`) y sus herramientas (`SKILL.md`), listos para instalarse en proyectos destino.
 
-## Extensiones en uso
+## 2. Estructura de la Fábrica
+
+El repositorio está organizado según el flujo de producción:
+
+- **`Input\`**: Fuentes, referencias y materiales de entrada.
+- **`Generator\`**: Línea de ensamblaje con los planos y manuales de construcción.
+  - **`.rules\`**: Reglas internas de operación para la fábrica.
+  - **`Agents\`**: Laboratorio de diseño del producto final.
+    - `.rules\`: Reglas de comportamiento exportables.
+    - `Global\`: Define el **Agente Global** (comportamiento universal y marco de responsabilidades).
+    - `Local\`: Define el **Agente Local** (`AGENTS_Scope.md`). Es el enrutador que evalúa la orden y selecciona el skill.
+    - `Skills\`: Herramientas, plantillas y paso a paso técnico (`SKILL.md`) para ejecutar la tarea.
+- **`Proto\` y `Reviews\`**: Entornos para pruebas de concepto y auditorías.
+- **`Export\`**: Productos terminados y listos para instalarse en el proyecto del cliente.
+
+## 3. Extensiones recomendadas
 
 - [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme/blob/main/README.md): `Ctrl+Shift+P` → `Material Icons: Activate Icon Theme`.
 - [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf): `Ctrl+Shift+P` → `Markdown PDF: Export (pdf)`.
+
+## 4. Trabajo documental en este proyecto
+
+Antes de crear o modificar documentos, consulta la gobernanza global vigente del asistente y las [reglas de Generator](Generator/.rules/Reglas_Operacion.md). Comprueba qué contenido ya tiene una fuente vigente; edita solo esa fuente y crea otro archivo únicamente si cumple una función distinta. Escribe lo necesario para decidir, ejecutar o verificar, sin repetir instrucciones generales.

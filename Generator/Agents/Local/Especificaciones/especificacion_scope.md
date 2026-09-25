@@ -1,6 +1,6 @@
 # Especificación del Scope
 
-- Actualizado: el 2026-09-24 02:43
+- Actualizado: el 2026-09-24 20:19
 - Rol de ejecución: arquitectura de información, diseño de gobernanza y revisión documental
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -21,15 +21,7 @@ La construcción de skills, la instalación de gobernanza y la ejecución de pru
 
 ## Fundamento del diseño
 
-El Scope organiza el contexto, las reglas locales y la selección de capacidades. El término «enrutador» describe esa selección; no implica un servicio ejecutable ni un agente independiente.
-
-| Alternativa | Beneficio | Límite |
-| :--- | :--- | :--- |
-| Concentrar los procedimientos en el Scope | Permite consultar todo en un archivo. | Mezcla responsabilidades y obliga a mantener el Scope por cambios de cada especialidad. |
-| Usar solo skills | Conserva la independencia de los métodos. | Deja sin una ubicación común el contexto y los límites del proyecto. |
-| Separar Scope y skills — base de este diseño | Mantiene el gobierno local y los métodos en sus respectivas ubicaciones. | Requiere descripciones útiles, referencias verificables y tratamiento de dependencias. |
-
-Esta separación sustenta las cuatro secciones del contrato; su eficacia debe comprobarse en el entorno evaluado.
+Separar el Scope de las skills mantiene el contexto y los límites del proyecto en una fuente común, sin obligar a actualizarla por cada cambio de un método especializado. El término «enrutador» describe la selección de skills; no implica un servicio ejecutable ni un agente independiente.
 
 ## Artefacto resultante
 
@@ -37,7 +29,7 @@ El resultado es un archivo de gobernanza local que cumple esta especificación. 
 
 ## Fuentes de diseño
 
-Esta propuesta de contrato se apoya en las reglas aprobadas de [Gobernanza general](../../Gobernanza/Reglas_Exportables/reglas_generales.md), [AGENTS global](../../Gobernanza/Reglas_Exportables/reglas_agents_global.md) y [Scope local](../../Gobernanza/Reglas_Exportables/reglas_agents_local.md). Las reglas de Gobernanza se consultan para mantener coherencia; se seleccionan las pertinentes sin trasladar el catálogo completo ni sustituir sus fuentes.
+Esta propuesta de contrato se apoya en las reglas aprobadas de [Gobernanza general](../../.rules/reglas_generales.md), [AGENTS global](../../.rules/reglas_agents_global.md) y [Scope local](../../.rules/reglas_agents_local.md). Las reglas de Gobernanza se consultan para mantener coherencia; se seleccionan las pertinentes sin trasladar el catálogo completo ni sustituir sus fuentes.
 
 ## Anatomía del Scope
 
@@ -115,32 +107,19 @@ Una bandera escrita en el Scope expresa una política, pero no garantiza que el 
 
 **Criterio de revisión:** se puede saber qué está protegido, qué autorización permite cambiarlo y qué evidencia confirma el cierre.
 
-## Criterios de diseño
-
-- Incluir solo contexto local necesario; remitir a la fuente vigente en lugar de copiar gobernanza o procedimientos completos.
-- Mantener una sola ubicación vigente para cada regla y evitar contradicciones o duplicaciones entre niveles.
-- Separar decisiones confirmadas, supuestos y pendientes cuando afecten la ejecución.
-- Mantener las descripciones de skills enfocadas en cuándo aplican; reservar sus pasos detallados para cada skill.
-- Declarar dependencias del entorno y limitar a ellas las afirmaciones sobre carga, permisos, recarga y compatibilidad.
-- No establecer cantidades, extensiones ni límites de líneas sin una necesidad del proyecto.
-
 ## Criterios de aceptación
 
 El Scope cumple su contrato cuando:
 
-- Las cuatro secciones cubren sus responsabilidades con instrucciones claras y sin contradicciones ni repeticiones innecesarias.
-- El contexto permite explicar el propósito, el alcance y las exclusiones sin inventar datos.
-- Distingue lo reutilizable de la configuración específica del proyecto y sirve tanto a proyectos documentales como técnicos.
-- Respeta la jerarquía efectiva de instrucciones, los permisos y las reglas globales aprobadas; no promete capacidades técnicas no comprobadas.
-- La selección, combinación y ausencia de skills tienen respuestas definidas, incluidas dependencias e información incompletas.
-- Las referencias necesarias existen y los datos desconocidos permanecen como pendientes.
-- Las modificaciones de gobernanza indican alcance, autorización y comprobación del cierre, sin tratar una bandera documental como control técnico.
+- Satisface los criterios de revisión de las cuatro secciones, sin contradicciones ni reglas duplicadas entre niveles.
+- Distingue el contenido reutilizable de la configuración del proyecto y del entorno, sin imponer cantidades o extensiones sin una necesidad confirmada.
+- Las referencias necesarias son vigentes y verificables; los supuestos y datos desconocidos que afecten la aplicación están identificados.
 
 La revisión documental puede comprobar estos criterios. No demuestra que el asistente descubra o aplique el Scope correctamente; eso requiere una validación por entorno.
 
 ## Validación por entorno
 
-La validación requiere una configuración identificable: asistente, versión y modalidad; proyecto de prueba independiente de Generator; archivo o mecanismo de entrada; descubrimiento y precedencia; reinicio o recarga; permisos y controles; evidencia del mecanismo; revisión exacta del Scope evaluado. La configuración adapta la integración sin modificar las cuatro secciones del contrato.
+Los siguientes resultados se comprueban para una revisión exacta del Scope y una configuración identificada. La ficha del entorno, los estímulos y el registro de evidencia se definen en el [proceso de validación](../Procesos/proceso_validacion_scope.md); adaptan la integración sin cambiar las cuatro secciones del contrato.
 
 | Caso | Resultado esperado |
 | :--- | :--- |
@@ -154,6 +133,4 @@ La validación requiere una configuración identificable: asistente, versión y 
 | Reanudación de una excepción temporal, cuando se utilice | Antes de continuar una intervención interrumpida, comprueba la autorización, su alcance y el estado de la excepción. Verifica el cierre; si falla, informa el pendiente y detiene nuevas escrituras protegidas. |
 | Protección técnica, cuando exista | La evidencia distingue lo que impide el entorno de lo que solo expresa una política documental. |
 
-Cada caso debe conservar estímulo, resultado esperado y observado, evidencia, estado y limitaciones asociados a la revisión evaluada. Un caso no ejecutado permanece pendiente; uno no aplicable requiere motivo. La ausencia de skills reales permite probar su ausencia, pero deja la selección sin validar y no autoriza construirlas como parte de esta prueba.
-
-Un resultado fallido impide declarar satisfecho el criterio afectado. Una respuesta por sí sola no demuestra qué archivo se cargó. La revisión documental tampoco acredita protección técnica ni validación operativa. Las conclusiones se limitan al asistente, versión, modalidad y proyecto efectivamente evaluados.
+Las conclusiones se limitan a la revisión y al entorno comprobados; los fallos o pendientes obligatorios impiden declarar validación operativa integral.

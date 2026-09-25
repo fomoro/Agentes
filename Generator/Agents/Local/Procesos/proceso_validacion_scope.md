@@ -1,6 +1,6 @@
 # Proceso de validación del Scope por entorno
 
-- Actualizado: el 2026-09-24 02:43
+- Actualizado: el 2026-09-24 20:19
 - Rol de ejecución: diseño de procesos, arquitectura de gobernanza y revisión documental
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -11,7 +11,7 @@ Definir cómo comprobar una revisión identificada de Scope en un entorno autori
 
 ## Alcance
 
-Aplicar cuando se solicite validar un Scope nuevo o existente. El método puede usarse sin repetir su elaboración, siempre que se cumplan las condiciones de entrada. Las reglas para mantener este documento están en el [README de Scope](../README.md); las [reglas de la fábrica](../../Gobernanza/Reglas_de_la_Fabrica/reglas_de_la_fabrica.md) gobiernan su preparación.
+Aplicar cuando se solicite validar un Scope nuevo o existente, sin repetir su elaboración si se cumplen las condiciones de entrada. Las [reglas de la fábrica](../../../.rules/Reglas_Operacion.md) gobiernan su preparación y mantenimiento documental.
 
 El encargo debe cubrir el entorno de prueba y los cambios necesarios. Este método no autoriza construir skills, intervenir un proyecto distinto del autorizado ni instalar gobernanza de uso permanente.
 
@@ -23,11 +23,11 @@ El encargo debe cubrir el entorno de prueba y los cambios necesarios. Este méto
 - Instrucciones efectivas, permisos y controles del entorno de prueba.
 - Skills y dependencias disponibles, cuando los casos las requieran.
 
-Si falta la revisión documental o corresponde a otra versión, realizarla antes de iniciar una evaluación integral. Mientras esa condición no se cumpla o existan pendientes obligatorios, solo pueden ejecutarse pruebas parciales dentro del encargo, identificando esa condición desde el inicio. Una respuesta favorable no subsana una sección ausente o una contradicción del contrato.
+Si falta la revisión documental, corresponde a otra versión o tiene pendientes obligatorios, completar lo necesario antes de una evaluación integral. Mientras tanto, identificar desde el inicio las pruebas parciales permitidas por el encargo.
 
 ## Ficha del entorno
 
-Completar una ficha por configuración evaluada. Los campos provienen de los requisitos de la Especificación; lo desconocido permanece pendiente y bloquea únicamente la comprobación que lo necesite.
+Completar una ficha por configuración evaluada. Lo desconocido permanece pendiente y bloquea únicamente la comprobación que lo necesite.
 
 ```text
 Identificador de la evaluación:
@@ -64,7 +64,7 @@ Ubicación acordada para evidencias:
 | Dependencia ausente | Con una skill existente que requiera un recurso no disponible en el entorno de prueba, pedir una tarea dependiente de ese recurso. Registrar cómo identifica la ausencia, qué parte detiene y qué alternativa o bloqueo comunica. No retirar recursos del proyecto real para provocar el caso. |
 | Conflicto | Presentar una instrucción de prueba que contradiga una restricción efectiva y comprobar cuál aplica. |
 | Cambio de gobernanza | Comparar una tarea ordinaria con un cambio explícito acotado sobre una copia. Registrar diferencias y el estado de cualquier excepción temporal aplicable. |
-| Reanudación de una excepción temporal | Si se utiliza ese mecanismo, interrumpir de forma controlada una intervención autorizada sobre una copia y reanudarla. Registrar la comprobación de autorización y estado antes de nuevas escrituras y la evidencia de cierre. Un cierre fallido se informa como tal y detiene nuevas escrituras protegidas. |
+| Reanudación de una excepción temporal | Si se utiliza ese mecanismo, interrumpir de forma controlada una intervención autorizada sobre una copia y reanudarla. Registrar la comprobación de autorización y estado antes de nuevas escrituras y la evidencia de cierre. |
 | Protección técnica | Si existe un control de escritura, probarlo sobre una copia dentro del alcance autorizado y registrar el efecto observado. |
 
 Si no hay skills reales, dejar pendiente su selección y la comprobación de dependencias, y probar la respuesta ante su ausencia. Si falta un recurso para comprobar un caso aplicable, dejarlo pendiente. Si el entorno no utiliza excepciones temporales o protección técnica, registrar esos casos como no aplicables con el motivo correspondiente.
@@ -87,4 +87,4 @@ Limitaciones, motivo de no aplicación o corrección pendiente:
 
 Entregar la ficha del entorno, los registros por caso y una conclusión sobre la revisión evaluada. Declarar validación operativa para ese entorno solo si la revisión documental cumple el contrato, los casos aplicables cuentan con evidencia satisfactoria y las intervenciones autorizadas están cerradas. Con pendientes obligatorios, fallos o cobertura parcial, informar los resultados parciales y lo necesario para completarlos.
 
-Los casos no ejecutados o fallidos no se registran como cumplidos. Identificar las exclusiones justificadas y no extrapolar resultados a otros asistentes, versiones o proyectos. La aprobación del diseño, la revisión documental y la validación operativa conservan estados diferenciados.
+No extrapolar resultados a otros asistentes, versiones o proyectos. La aprobación del diseño, la revisión documental y la validación operativa conservan estados diferenciados.

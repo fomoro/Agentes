@@ -1,6 +1,6 @@
 # Proceso de creación de un Scope
 
-- Actualizado: el 2026-09-24 02:43
+- Actualizado: el 2026-09-24 20:19
 - Rol de ejecución: diseño de procesos, arquitectura de gobernanza y revisión documental
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -13,7 +13,7 @@ Establecer cómo recopilar el contexto y la gobernanza efectiva de un proyecto d
 
 La elaboración termina con un borrador en [Propuestas](../Propuestas/) y un resultado de revisión explícito. Cuando se solicite comprobar su comportamiento, aplicar el [proceso de validación](proceso_validacion_scope.md) sobre una revisión identificada. La elaboración no instala el Scope ni construye skills.
 
-Las reglas para mantener y contrastar los documentos de esta carpeta se encuentran en el [README de Scope](../README.md). Las [reglas de la fábrica](../../Gobernanza/Reglas_de_la_Fabrica/reglas_de_la_fabrica.md) gobiernan su construcción.
+Las [reglas de la fábrica](../../../.rules/Reglas_Operacion.md) gobiernan su construcción y mantenimiento documental.
 
 ## Insumos
 
@@ -21,7 +21,7 @@ Las reglas para mantener y contrastar los documentos de esta carpeta se encuentr
 - Propósito, resultados esperados, límites y convenciones confirmados del proyecto.
 - Fuentes de contexto pertinentes y accesibles dentro del alcance autorizado.
 - Instrucciones efectivas del entorno, gobernanza global y local del proyecto destino y Scope existente, si lo hay; identificar sus ubicaciones según la configuración real del destino.
-- Reglas aprobadas de [Gobernanza general](../../Gobernanza/Reglas_Exportables/reglas_generales.md), [AGENTS global](../../Gobernanza/Reglas_Exportables/reglas_agents_global.md) y [Scope local](../../Gobernanza/Reglas_Exportables/reglas_agents_local.md).
+- Reglas aprobadas de [Gobernanza general](../../.rules/reglas_generales.md), [AGENTS global](../../.rules/reglas_agents_global.md) y [Scope local](../../.rules/reglas_agents_local.md).
 - Skills disponibles y su descripción, cuando sean relevantes para el proyecto.
 - Ruta o mecanismo de entrada del Scope en el entorno destino, si está confirmado.
 
@@ -35,8 +35,8 @@ Si un insumo requerido no está disponible, registrar el vacío. No sustituirlo 
 4. **Separar hechos y pendientes.** Registrar qué está confirmado, qué es supuesto y qué se desconoce. Mantener como pendiente cualquier dato que afecte el alcance, las reglas, la ruta o las capacidades del entorno.
 5. **Asignar el contenido.** Preparar las cuatro secciones definidas en la especificación: contexto y alcance del proyecto; reglas y límites de actuación; selección y uso de skills; cambios de gobernanza. Seleccionar del catálogo las reglas compatibles y pertinentes, ubicarlas en su nivel y remitir a las fuentes vigentes en vez de copiarlas.
 6. **Redactar el borrador.** Usar instrucciones concretas y aplicables al proyecto. Distinguir preferencias de requisitos, incluir condiciones y excepciones necesarias y no afirmar como universales las rutas, permisos, mecanismos de carga o capacidades de un entorno.
-7. **Revisar el contrato.** Contrastar el borrador con los criterios de aceptación de la especificación. Comprobar claridad, coherencia con la gobernanza del destino, ausencia de duplicaciones o conflictos, referencias y rutas. Asociar el resultado de revisión a la versión exacta del borrador mediante un identificador de revisión o huella de contenido. Distinguir la revisión documental de una prueba operativa.
-8. **Entregar para revisión.** Guardar el borrador en la ubicación acordada dentro de [Propuestas](../Propuestas/), identificar el proyecto destino y marcar el estado como propuesta. Comprobar que el archivo guardado corresponde a la revisión evaluada y entregar los insumos faltantes y los aspectos del entorno que aún no se han probado.
+7. **Revisar el borrador.** Aplicar el cierre y verificación de este proceso. Asociar el resultado a una revisión exacta mediante un identificador o huella de contenido.
+8. **Entregar para revisión.** Guardar el borrador en la ubicación acordada dentro de [Propuestas](../Propuestas/), identificar el proyecto destino y marcarlo como propuesta. Comprobar que el archivo entregado corresponde a la revisión evaluada.
 
 ## Resultado de la elaboración
 
@@ -44,21 +44,11 @@ Entregar el borrador identificado por proyecto y revisión, junto con un cierre 
 
 Si quedan requisitos obligatorios sin resolver, indicar que el borrador está incompleto y cuáles son. Su existencia no implica aprobación, instalación ni validación operativa.
 
-## Manejo de decisiones y bloqueos
-
-- Si hay instrucciones en conflicto, aplicar la precedencia efectiva. Si no se puede resolver el conflicto, registrar la decisión necesaria y detener solo la parte afectada.
-- Si falta contexto no esencial, continuar con las partes independientes y dejar el dato como pendiente.
-- Si no hay una skill aplicable, no inventar ni declarar una capacidad; continuar solo si la tarea puede resolverse con las instrucciones y recursos disponibles.
-- Si la ubicación de entrega o un permiso necesario no está definido, no escribir fuera del área autorizada; solicitar la decisión pendiente.
-
 ## Cierre y verificación
 
 Antes de entregar, confirmar que:
 
-- [ ] El borrador cubre las cuatro secciones del contrato y no incorpora reglas generales duplicadas.
-- [ ] La gobernanza efectiva del destino fue consultada antes de seleccionar reglas; las ausencias, restricciones de acceso y conflictos están registrados.
-- [ ] Los hechos, supuestos y pendientes están diferenciados cuando afectan la aplicación.
-- [ ] Las referencias y rutas incluidas existen y corresponden a fuentes vigentes.
-- [ ] El destino y el estado del borrador son explícitos; no se afirma instalación ni aprobación.
-- [ ] Se indica qué se revisó documentalmente y qué queda por validar en el entorno destino.
-- [ ] El resultado de revisión identifica la versión exacta del borrador entregado.
+- [ ] El borrador satisface los criterios de aceptación de la especificación y es coherente con la gobernanza efectiva del destino.
+- [ ] Las fuentes y rutas incluidas están verificadas; las ausencias, restricciones de acceso y conflictos no resueltos están registrados.
+- [ ] El proyecto destino, la revisión y el estado de propuesta son explícitos.
+- [ ] El cierre identifica lo comprobado, los requisitos pendientes y lo que falta validar en el entorno, sin afirmar instalación ni aprobación.

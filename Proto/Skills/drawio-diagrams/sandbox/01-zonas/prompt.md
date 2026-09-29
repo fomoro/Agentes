@@ -1,0 +1,1 @@
+Genera un diagrama `.drawio` mostrando los 4 tipos de zonas (Accesos, Aplicaciones, Integración, Externos) apiladas. Aplica estrictamente el perfil visual `wolfan`.

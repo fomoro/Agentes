@@ -1,6 +1,6 @@
 # Catálogo de estilos — Colcomercio
 
-- Actualizado: el 2026-09-25 01:38
+- Actualizado: el 2026-09-29 11:55
 - Rol de ejecución: diseño visual y arquitectura de skills
 - Autor: Sam (Asistente IA del Sr. Wolfan)
 - Estado: propuesta en revisión
@@ -11,14 +11,13 @@ Definir las decisiones visuales propias de Colcomercio para diagramas de soluci�
 
 ## Base visual
 
-- **Zonas:** `swimlane`, título centrado y negrita de 14 px, sombra y `strokeWidth=2`. **Frames:** `umlFrame`, título en la pestaña y negrita de 12 px, con sombra. Ambos admiten elementos hijos y ajustan su tamaño al contenido.
-- En `umlFrame`, ajustar la propiedad de estilo `width` al ancho del título más un margen para mantenerlo en una línea; conservar `whiteSpace=wrap` y no confundir `width` de la pestaña con el ancho total del frame.
-- **Texto:** preferir Helvetica Neue, con Helvetica o Arial como alternativas. Usar mayúscula inicial en las etiquetas comunes y conservar la grafía oficial de productos y siglas.
-- En las tablas, '—' significa sin degradado. Cuando exista, aplicarlo hacia abajo (`gradientDirection=south`).
+- **Texto:** Preferir Helvetica Neue (o Arial). Mayúscula inicial en etiquetas comunes; conservar grafía de marcas.
+- **Degradados:** En las tablas, '—' indica color sólido. Todo degradado aplica hacia abajo (`gradientDirection=south`).
+- **Contenedores:** Zonas y Frames admiten elementos hijos y ajustan su cuerpo al contenido.
 
 ## Componentes
 
-Ambos usan rectángulo de esquinas rectas, fondo blanco, borde negro, sombra y texto de 11 px. El motor ajusta sus dimensiones al contenido.
+Formato por defecto (cuando no aplique Zona, Frame o Elemento específico): rectángulo recto, fondo blanco, borde negro, sombra y texto 11 px.
 
 | Tipo | Función visual |
 | :--- | :--- |
@@ -26,6 +25,11 @@ Ambos usan rectángulo de esquinas rectas, fondo blanco, borde negro, sombra y t
 | Contenedor | Agrupa piezas hijas; etiqueta arriba y `container=1`. |
 
 ## Zonas
+
+Agrupan lógicamente la arquitectura (dominio o capa).
+
+- **Propiedades base:** `shape=swimlane; strokeWidth=2; shadow=1`
+- **Título:** Centrado, negrita, 14 px (`fontStyle=1; fontSize=14`).
 
 | Zona | Fondo | Degradado | Borde | Interior | Texto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -36,17 +40,22 @@ Ambos usan rectángulo de esquinas rectas, fondo blanco, borde negro, sombra y t
 
 ## Frames
 
+Representan el entorno físico o la nube de despliegue.
+
+- **Propiedades base:** `shape=umlFrame; strokeWidth=2; shadow=0; rounded=1; swimlaneFillColor=#FFFFFF; whiteSpace=wrap`
+- **Pestaña:** Fuente regular, 14 px (`fontStyle=0; fontSize=14`). Dimensiones estrictas de `width=140; height=20` (incrementar `width` solo si el texto lo sobrepasa).
+
 | Frame | Fondo | Degradado | Borde | Texto |
 | :--- | :--- | :--- | :--- | :--- |
-| OnPremise | `#F5F5F5` | — | `#666666` | Negro |
+| OnPremise | `#f5f5f5` | `#b3b3b3` | `#666666` | Negro |
 | SAP Nube | `#DAE8FC` | `#7EA6E0` | `#6C8EBF` | Negro |
-| Oracle Nube | `#F8CECC` | `#EA6B66` | `#B85450` | Negro |
+| Oracle Nube | `#E53935` | `#B71C1C` | `#B71C1C` | Blanco |
 | Privado Nube | `#D5E8D4` | `#97D077` | `#82B366` | Negro |
 | AWS Nube | `#FFCD28` | `#FFA500` | `#D79B00` | Negro |
-| Microsoft 365 | `#B1DDF0` | — | `#10739E` | Negro |
-| Salesforce Nube | `#0050EF` | — | `#001DBC` | Blanco |
-| GCP Nube | `#F8CECC` | — | `#B85450` | Negro |
-| Microsoft Azure Nube | `#1BA1E2` | — | `#006EAF` | Blanco |
+| Microsoft 365 | `#B1DDF0` | `#84C6E7` | `#10739E` | Negro |
+| Salesforce Nube | `#0050EF` | `#0039AB` | `#001DBC` | Blanco |
+| GCP Nube | `#800020` | `#4D0013` | `#4D0013` | Blanco |
+| Microsoft Azure Nube | `#1BA1E2` | `#1174A6` | `#006EAF` | Blanco |
 
 ## Elementos
 

@@ -1,0 +1,63 @@
+---
+name: csharp-onion-architecture
+description: Diseña, implementa, revisa o migra aplicaciones C# con Onion Architecture cuando el usuario la solicita o el proyecto ya la adopta. Úsala para límites, contratos y dependencias del núcleo; no por cualquier cambio en C# ni para UI visual, redacción o PMO.
+---
+
+# Onion Architecture en C#
+
+- Actualizado: el 2026-10-02 15:32
+- Rol de ejecución: arquitectura de software .NET y diseño de skills
+- Autor: Sam (asistenta IA del Sr. Wolfan)
+- Estado: borrador v2; validación operativa pendiente
+
+## Propósito
+
+Mantener el dominio independiente del transporte y la persistencia, con casos de uso y adaptadores comprobables. Respeta la versión de .NET, contratos y convenciones del proyecto. Si se comparan arquitecturas, evalúa el ajuste de Onion sin asumir su adopción. Ajusta la separación física al cambio: Onion no exige un número de proyectos, microservicios ni bibliotecas adicionales.
+
+## Elegir la modalidad y sus entradas
+
+Infiere la modalidad de la solicitud y aplica solo su recorrido. Una revisión o consulta no activa implementación. Si el encargo combina modalidades, completa únicamente las solicitadas.
+
+| Modalidad | Entrada suficiente | Recorrido y salida |
+| :--- | :--- | :--- |
+| Consulta o comparación | Pregunta, objetivo y restricciones disponibles. | Explica o compara al nivel solicitado; señala los supuestos que condicionan la recomendación. No exige repositorio ni caso de uso si la pregunta es conceptual. |
+| Revisión estructural | Objetivo y código o diseño accesible. | Inspecciona referencias, tipos y composición; entrega hallazgos con ubicación, efecto y corrección propuesta. No exige un caso de uso para detectar acoplamientos. |
+| Diseño | Alcance y comportamiento representativo, documentado o inferible de fuentes vigentes. | Asigna responsabilidades, contratos y dependencias; entrega el diseño mínimo implementable y sus decisiones pendientes. |
+| Implementación | Cambio solicitado, comportamiento esperado y proyecto accesible, o requisitos suficientes para uno nuevo. | Implementa el cambio completo en las responsabilidades afectadas y verifica su comportamiento. No exige reorganizar toda la solución. |
+| Migración | Proyecto actual, objetivo de transición y comportamiento que deba conservarse. | Caracteriza un flujo afectado, define compatibilidad y recuperación viable, y migra por incrementos verificables. Si solo se solicita un plan, entrega el plan. |
+
+Obtén primero la información del repositorio y sus decisiones vigentes. Pregunta solo por un dato indispensable que cambie la solución; continúa lo independiente. Una revisión funcional puede necesitar reglas de negocio que una revisión estructural no requiere.
+
+## Reglas comunes de arquitectura
+
+| Responsabilidad | Contenido y dependencias internas |
+| :--- | :--- |
+| Domain | Modelo y reglas del negocio; no depende de capas externas. |
+| Application | Coordina casos de uso y define sus puertos; depende de Domain. |
+| Infrastructure | Implementa persistencia e integraciones; depende de los contratos internos que implementa. |
+| Presentation | Traduce el canal a casos de uso; depende de Application y de tipos de Domain solo si el contrato lo justifica. |
+| Host / composition root | Configura y ensambla implementaciones; puede referenciar las capas necesarias para ello. |
+
+Estas son responsabilidades lógicas. El Host puede convivir con Presentation; su referencia a Infrastructure no habilita usar adaptadores concretos desde endpoints. Comprueba ciclos directos y transitivos y usos de tipos, especialmente si varias responsabilidades comparten ensamblado.
+
+Coloca cada puerto en la capa interna que necesita su contrato. Mantén las invariantes en Domain y la coordinación en Application. Los adaptadores traducen transporte, datos y errores; el núcleo no expone `DbContext`, `HttpContext`, `IActionResult` ni payloads de proveedores. Registra implementaciones en la composición y evita resolver servicios dinámicamente desde las reglas de negocio.
+
+## Decisiones según el trabajo
+
+Consulta solo las secciones pertinentes de [Decisiones en C#](references/decisiones-csharp.md):
+
+- **§1 Estructura:** proyectos, componentes compartidos o composición.
+- **§2 Contratos:** modelo, DTOs, puertos, validación y errores.
+- **§3 Persistencia:** ORM, SQL existente, transacciones, concurrencia o dobles.
+- **§4 Integración:** canales, autenticación, autorización, reintentos o configuración.
+- **§5 Migración y pruebas:** transición de código existente o comprobaciones de cambios ejecutables.
+
+Evita aplicar secciones ajenas al cambio. Conserva los patrones existentes compatibles con Onion; introduce abstracciones o dependencias solo si resuelven una necesidad comprobada.
+
+## Verificación y cierre
+
+En consulta y diseño, comprueba coherencia de responsabilidades y contratos. En revisión, sustenta los hallazgos en el recurso examinado y distingue una dependencia comprobada de una sospecha. En implementación y migración, compila y ejecuta las pruebas disponibles del comportamiento y los límites afectados, además de los controles obligatorios del proyecto.
+
+El análisis documental no necesita SDK ni base de datos. Compilar requiere un SDK compatible y dependencias disponibles; las pruebas de integración necesitan sus recursos. Si falta alguno, realiza las comprobaciones posibles y declara qué resultado no pudo verificarse. Una compilación no prueba independencia arquitectónica; un doble en memoria no acredita el comportamiento del proveedor real.
+
+Entrega el resultado de la modalidad en la ubicación del proyecto, con evidencia y pendientes relevantes. Actualiza su registro de arquitectura o ADR cuando corresponda a una decisión estructural. Si subsisten acoplamientos externos del núcleo, identifica la desviación y su tratamiento antes de afirmar cumplimiento de Onion.
